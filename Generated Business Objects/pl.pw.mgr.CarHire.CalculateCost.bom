@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:PrimitiveTypeFacets="http:///schemas/PrimitiveTypeFacets/_8TmTUMtlEdy7K9XeCH7Hrw/0" xmlns:XsdNotationProfile="http:///schemas/XsdNotationProfile/_LmHW0PHtEd2z3-vLsCwuEg/1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.2/notation" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xsi:schemaLocation="http:///schemas/PrimitiveTypeFacets/_8TmTUMtlEdy7K9XeCH7Hrw/0 pathmap://BOM_TYPES/PrimitiveTypeFacets.profile.uml#_8TmTUstlEdy7K9XeCH7Hrw http:///schemas/XsdNotationProfile/_LmHW0PHtEd2z3-vLsCwuEg/1 pathmap://XSD_NOTATION_TYPES/XsdNotation.profile.uml#_LmHW0fHtEd2z3-vLsCwuEg">
+  <uml:Model xmi:id="pl.pw.mgr.CarHire.CalculateCost" name="pl.pw.mgr.CarHire.CalculateCost">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qkMRNv8uEeehz8elB3v-pA" source="model.metadata">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qkMRN_8uEeehz8elB3v-pA" key="author" value="MS0C73284"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qkMROP8uEeehz8elB3v-pA" key="created" value="1516596154819"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qkMROf8uEeehz8elB3v-pA" key="version" value="4"/>
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qlPaEP8uEeehz8elB3v-pA" key="checksum" value="1607736487"/>
+    </eAnnotations>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="pl.pw.mgr.CarHire.CalculateCoststring_502" name="string_50">
+      <generalization xmi:type="uml:Generalization" xmi:id="_qjmbVP8uEeehz8elB3v-pA">
+        <general xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AGoC4HcNEdytQ9AWEvOuug?BomPrimitiveTypes%3a%3aText?"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="pl.pw.mgr.CarHire.CalculateCostdateTime2" name="dateTime">
+      <generalization xmi:type="uml:Generalization" xmi:id="_qjwMU_8uEeehz8elB3v-pA">
+        <general xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AMizkHvBEdy0U8_1u7Q20g?BomPrimitiveTypes%3a%3aDateTime?"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:PrimitiveType" xmi:id="pl.pw.mgr.CarHire.CalculateCostdecimal__2" name="decimal__">
+      <generalization xmi:type="uml:Generalization" xmi:id="_qj5WQ_8uEeehz8elB3v-pA">
+        <general xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_gzTqYHvBEdy0U8_1u7Q20g?BomPrimitiveTypes%3a%3aDecimal?"/>
+      </generalization>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="pl.pw.mgr.CarHire.CalculateCostCalculateCost" name="CalculateCost">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="CalculateCostCalculateCost" name="CalculateCost">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="CalculateCostcarId" name="carId" type="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="CalculateCostdateFrom" name="dateFrom">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AMizkHvBEdy0U8_1u7Q20g?BomPrimitiveTypes%3a%3aDateTime?"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="CalculateCostdateTo" name="dateTo">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://BOM_TYPES/BomPrimitiveTypes.library.uml#_AMizkHvBEdy0U8_1u7Q20g?BomPrimitiveTypes%3a%3aDateTime?"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="CalculateCostcost" name="cost" type="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qjcqUf8uEeehz8elB3v-pA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qjcqUv8uEeehz8elB3v-pA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://XSD_NOTATION_TYPES/XsdNotation.profile.uml#_LmHW0fHtEd2z3-vLsCwuEg"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://XSD_NOTATION_TYPES/XsdNotation.profile.uml#_rcgvMcXQEd24G-GaruVVqA?XsdNotationProfile?"/>
+    </profileApplication>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_qjcqU_8uEeehz8elB3v-pA">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qjcqVP8uEeehz8elB3v-pA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="pathmap://BOM_TYPES/PrimitiveTypeFacets.profile.uml#_8TmTUstlEdy7K9XeCH7Hrw"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="pathmap://BOM_TYPES/PrimitiveTypeFacets.profile.uml#_3A574HcJEdytQ9AWEvOuug?PrimitiveTypeFacets?"/>
+    </profileApplication>
+  </uml:Model>
+  <XsdNotationProfile:XsdBasedModel xmi:id="_qjcqVf8uEeehz8elB3v-pA" base_Package="pl.pw.mgr.CarHire.CalculateCost?pl.pw.mgr.CarHire.CalculateCost?" xsdTargetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost" xsdSchemaLocation="CalculateCost.wsdl" xsdAttributeForm="unqualified" xsdElementForm="unqualified" xsdStudioVersion="3.10.0.011" bomWsdlSources="CalculateCost.wsdl"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qjmbUf8uEeehz8elB3v-pA"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qjmbUv8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?"/>
+  <XsdNotationProfile:XsdBasedRestriction xmi:id="_qjmbU_8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?" xsdMaxLengthFixed="false" xsdMaxLengthValue="50"/>
+  <XsdNotationProfile:XsdBasedPrimitiveType xmi:id="_qjmbVf8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?" xsdSimpleTypeName="string_50" xsdRestrictionBase="string"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qjwMUP8uEeehz8elB3v-pA"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qjwMUf8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdateTime2?pl.pw.mgr.CarHire.CalculateCost%3a%3adateTime?"/>
+  <XsdNotationProfile:XsdBasedRestriction xmi:id="_qjwMUv8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdateTime2?pl.pw.mgr.CarHire.CalculateCost%3a%3adateTime?"/>
+  <XsdNotationProfile:XsdBasedPrimitiveType xmi:id="_qjwMVP8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdateTime2?pl.pw.mgr.CarHire.CalculateCost%3a%3adateTime?" xsdSimpleTypeName="dateTime" xsdRestrictionBase="dateTime"/>
+  <XsdNotationProfile:XsdBasedRestriction xmi:id="_qj5WQP8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qj5WQf8uEeehz8elB3v-pA"/>
+  <PrimitiveTypeFacets:RestrictedType xmi:id="_qj5WQv8uEeehz8elB3v-pA" decimalSubType="fixedPoint" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?"/>
+  <XsdNotationProfile:XsdBasedPrimitiveType xmi:id="_qj5WRP8uEeehz8elB3v-pA" base_PrimitiveType="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?" xsdSimpleTypeName="decimal__" xsdRestrictionBase="decimal"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WRf8uEeehz8elB3v-pA" base_Element="_qjcqU_8uEeehz8elB3v-pA"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WRv8uEeehz8elB3v-pA" base_Element="_qjwMU_8uEeehz8elB3v-pA"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WR_8uEeehz8elB3v-pA" base_Element="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WSP8uEeehz8elB3v-pA" base_Element="_qj5WQ_8uEeehz8elB3v-pA"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WSf8uEeehz8elB3v-pA" base_Element="_qjmbVP8uEeehz8elB3v-pA"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qj5WSv8uEeehz8elB3v-pA" base_Element="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qkDHQP8uEeehz8elB3v-pA" base_Element="_qjcqUf8uEeehz8elB3v-pA"/>
+  <XsdNotationProfile:XsdBasedElement xmi:id="_qkDHQf8uEeehz8elB3v-pA" base_Element="pl.pw.mgr.CarHire.CalculateCostdateTime2?pl.pw.mgr.CarHire.CalculateCost%3a%3adateTime?"/>
+  <XsdNotationProfile:XsdBasedClass xmi:id="_qkDHQ_8uEeehz8elB3v-pA" base_Class="pl.pw.mgr.CarHire.CalculateCostCalculateCost?pl.pw.mgr.CarHire.CalculateCost%3a%3aCalculateCost?" xsdName="CalculateCost" xsdIsComplexType="false"/>
+  <PrimitiveTypeFacets:LabeledElement xmi:id="_qkMRMv8uEeehz8elB3v-pA" displayLabel="CalculateCost" base_NamedElement="pl.pw.mgr.CarHire.CalculateCostCalculateCost?pl.pw.mgr.CarHire.CalculateCost%3a%3aCalculateCost?"/>
+  <PrimitiveTypeFacets:LabeledElement xmi:id="_qkMRM_8uEeehz8elB3v-pA" displayLabel="dateTime" base_NamedElement="pl.pw.mgr.CarHire.CalculateCostdateTime2?pl.pw.mgr.CarHire.CalculateCost%3a%3adateTime?"/>
+  <PrimitiveTypeFacets:LabeledElement xmi:id="_qkMRNP8uEeehz8elB3v-pA" displayLabel="decimal__" base_NamedElement="pl.pw.mgr.CarHire.CalculateCostdecimal__2?pl.pw.mgr.CarHire.CalculateCost%3a%3adecimal__?"/>
+  <PrimitiveTypeFacets:LabeledElement xmi:id="_qkMRNf8uEeehz8elB3v-pA" displayLabel="string_50" base_NamedElement="pl.pw.mgr.CarHire.CalculateCoststring_502?pl.pw.mgr.CarHire.CalculateCost%3a%3astring_50?"/>
+  <notation:Diagram xmi:id="_qkMROv8uEeehz8elB3v-pA" type="Business Object Model" element="pl.pw.mgr.CarHire.CalculateCost?pl.pw.mgr.CarHire.CalculateCost?" name="pl.pw.mgr.CarHire.CalculateCost" measurementUnit="Pixel">
+    <styles xmi:type="notation:DiagramStyle" xmi:id="_qkMRO_8uEeehz8elB3v-pA"/>
+    <styles xmi:type="notation:FillStyle" xmi:id="_qkMRPP8uEeehz8elB3v-pA"/>
+  </notation:Diagram>
+</xmi:XMI>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:ns="http://www.mgr.pw.pl/CarHire/CalculateCost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarHire" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.mgr.pw.pl/CarHire/CalculateCost" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost">
+      <xsd:simpleType name="string_50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="dateTime">
+        <xsd:restriction base="xsd:dateTime"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal__">
+        <xsd:restriction base="xsd:decimal"/>
+      </xsd:simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="CalculateCost_CalculateCost_INPUT">
+    <wsdl:part name="carId" type="ns:string_50"/>
+    <wsdl:part name="dateFrom" type="ns:dateTime"/>
+    <wsdl:part name="dateTo" type="ns:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="CalculateCost_CalculateCost_OUTPUT">
+    <wsdl:part name="cost" type="ns:decimal__"/>
+  </wsdl:message>
+  <wsdl:portType name="CalculateCost">
+    <wsdl:operation name="CalculateCost">
+      <wsdl:input message="ns:CalculateCost_CalculateCost_INPUT"/>
+      <wsdl:output message="ns:CalculateCost_CalculateCost_OUTPUT"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

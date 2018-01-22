@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns="http://example.com/businessobjectmodel" xmlns:tns1="http://example.com/businessobjectmodel"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://example.com/businessobjectmodel">
+  <xsd:annotation>
+    <xsd:documentation>BOMORIGIN::/CarHire/Data Model/BusinessObjectModel.bom</xsd:documentation>
+  </xsd:annotation>
+  <xsd:complexType ecore:name="SALES_ORDER" id="_PNi98PReEeeCheHsxjQ5WQ" name="SALES_ORDER">
+    <xsd:sequence>
+      <xsd:element ecore:name="order_id" id="_LZW1cPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="order_id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="CUSTOMER_ID" id="_MG_-kPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="CUSTOMER_ID">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="ORDER_DATE" id="_OS84wPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="ORDER_DATE">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="SHIPMENT_DATE" id="_RNQGsPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="SHIPMENT_DATE">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="SHIPMENT_LOCATION" id="_SNRZQPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="SHIPMENT_LOCATION">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="TOTAL_AMOUNT" id="_T9O7APRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="TOTAL_AMOUNT">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="DELIVERY_METHOD" id="_VPemAPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="DELIVERY_METHOD">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="PRIORITY" id="_XmkZMPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="PRIORITY">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="STATUS" id="_Ys3S4PRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="STATUS">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="order_detail" id="_hweBYfRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="1" name="order_detail" type="ORDER_DETAIL"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="ORDER_DETAIL" id="_FtbC0PRvEeeCheHsxjQ5WQ" name="ORDER_DETAIL">
+    <xsd:sequence>
+      <xsd:element ecore:name="order_id" id="_AVCMYPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="order_id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="item_id" id="_CMQMsPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="item_id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="quantity" id="_Dr_hIPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="quantity">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="status" id="_E0eMIPRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="status">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CUSTOMER_ACCOUNT" id="_mqxNoPRvEeeCheHsxjQ5WQ" name="CUSTOMER_ACCOUNT">
+    <xsd:sequence>
+      <xsd:element ecore:name="id" id="_vN0MwPRvEeeCheHsxjQ5WQ" maxOccurs="1" minOccurs="0"
+          name="id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="amount_owed" id="_y92I0PRvEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="amount_owed">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="available_credit" id="_zzdiMPRvEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="available_credit">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="INVENTORY_ITEM" id="_p-xVAPRvEeeCheHsxjQ5WQ" name="INVENTORY_ITEM">
+    <xsd:sequence>
+      <xsd:element ecore:name="item_id" id="_VXwNsPRvEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="item_id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="name" id="_YudDwPRvEeeCheHsxjQ5WQ" maxOccurs="1" minOccurs="0"
+          name="name">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="price" id="_aepPAPRvEeeCheHsxjQ5WQ" maxOccurs="1" minOccurs="0"
+          name="price" type="tns1:double_StudioGeneratedTemplate"/>
+      <xsd:element ecore:name="quantity" id="_4Qj_oPRvEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="0" name="quantity">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="order_detail" id="_isvcYfRwEeeCheHsxjQ5WQ" maxOccurs="1"
+          minOccurs="1" name="order_detail" type="ORDER_DETAIL"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:simpleType name="double_StudioGeneratedTemplate">
+    <xsd:restriction base="xsd:double">
+      <xsd:minInclusive value="-179.76931348623157E+306"/>
+      <xsd:maxInclusive value="179.76931348623157E+306"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:element name="SALES_ORDERElement" type="SALES_ORDER"/>
+  <xsd:element name="ORDER_DETAILElement" type="ORDER_DETAIL"/>
+  <xsd:element name="CUSTOMER_ACCOUNTElement" type="CUSTOMER_ACCOUNT"/>
+  <xsd:element name="INVENTORY_ITEMElement" type="INVENTORY_ITEM"/>
+</xsd:schema>

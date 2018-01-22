@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns="http://mgr/carhire" xmlns:tns1="http://mgr/carhire" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://mgr/carhire">
+  <xsd:annotation>
+    <xsd:documentation>BOMORIGIN::/CarHire/Data Model/CarHire.bom</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType ecore:name="bookingState" id="_XaNE8P0zEee-cfu0sOdBwA" name="bookingState">
+    <xsd:restriction base="xsd:string">
+      <xsd:enumeration ecore:name="NEW" value="NEW"/>
+      <xsd:enumeration ecore:name="INPROGRESS" value="INPROGRESS"/>
+      <xsd:enumeration ecore:name="CLOSED" value="CLOSED"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:complexType ecore:name="CustomerData" id="_v-7JAP0UEee-cfu0sOdBwA" name="CustomerData">
+    <xsd:sequence>
+      <xsd:element ecore:name="id" id="_1efJAP0UEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="name" id="_3dOGkP0UEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="name">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="surname" id="_4bP1EP0UEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="surname">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="address" id="_6R4mkP0UEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="address">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="credit" id="_ieXRkP0VEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="credit">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal">
+            <xsd:totalDigits value="10"/>
+            <xsd:fractionDigits value="2"/>
+            <xsd:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="CarData" id="_-JTHkP0VEee-cfu0sOdBwA" name="CarData">
+    <xsd:sequence>
+      <xsd:element ecore:name="id" id="__MEMIP0VEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="id">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="costPerDay" id="_BvWBMP0WEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="costPerDay">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:decimal">
+            <xsd:totalDigits value="10"/>
+            <xsd:fractionDigits value="2"/>
+            <xsd:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="name" id="_KeydkP0WEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="name">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="manufacturer" id="_S0rxgP0WEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="manufacturer">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="class1" id="_XPM1AP0WEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="class1">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="horsepower" id="_pEkUEP0WEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="horsepower" type="xsd:int"/>
+      <xsd:element ecore:name="seats" id="_sTUvEP0WEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="seats" type="xsd:int"/>
+      <xsd:element ecore:name="isDamaged" id="_Hs4QcP0zEee-cfu0sOdBwA" default="false"
+          maxOccurs="1" minOccurs="0" name="isDamaged" type="xsd:boolean"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Booking" id="_4N7YgP0ZEee-cfu0sOdBwA" name="Booking">
+    <xsd:sequence>
+      <xsd:element ecore:name="bookingRef" id="_R6g5MP0fEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="bookingRef">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="carId" id="_TAUqsP0fEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="carId">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="customerId" id="_Tu3ywP0fEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="customerId">
+        <xsd:simpleType>
+          <xsd:restriction base="xsd:string">
+            <xsd:maxLength value="50"/>
+          </xsd:restriction>
+        </xsd:simpleType>
+      </xsd:element>
+      <xsd:element ecore:name="dateFrom" id="_UZvUsP0fEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="dateFrom" type="xsd:dateTime"/>
+      <xsd:element ecore:name="dateTo" id="_V0cYIP0fEee-cfu0sOdBwA" maxOccurs="1"
+          minOccurs="0" name="dateTo" type="xsd:dateTime"/>
+      <xsd:element ecore:name="state" id="_d1ftYP0zEee-cfu0sOdBwA" maxOccurs="1" minOccurs="0"
+          name="state" type="tns1:bookingState"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:complexType ecore:name="Cars" id="_al6DYP-NEeehz8elB3v-pA" name="Cars">
+    <xsd:sequence>
+      <xsd:element ecore:name="cars" id="_bKxD8P-NEeehz8elB3v-pA" maxOccurs="unbounded"
+          minOccurs="0" name="cars" type="tns1:CarData"/>
+    </xsd:sequence>
+  </xsd:complexType>
+  <xsd:element name="bookingStateElement">
+    <xsd:simpleType>
+      <xsd:restriction base="tns1:bookingState"/>
+    </xsd:simpleType>
+  </xsd:element>
+  <xsd:element name="CustomerDataElement" type="CustomerData"/>
+  <xsd:element name="CarDataElement" type="CarData"/>
+  <xsd:element name="BookingElement" type="Booking"/>
+  <xsd:element name="CarsElement" type="Cars"/>
+</xsd:schema>

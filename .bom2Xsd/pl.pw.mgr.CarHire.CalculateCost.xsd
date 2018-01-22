@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema
+    xmlns="http://www.mgr.pw.pl/CarHire/CalculateCost" xmlns:tns1="http://www.mgr.pw.pl/CarHire/CalculateCost"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost">
+  <xsd:annotation>
+    <xsd:documentation>BOMORIGIN::/CarHire/Generated Business Objects/pl.pw.mgr.CarHire.CalculateCost.bom</xsd:documentation>
+  </xsd:annotation>
+  <xsd:simpleType ecore:name="string_50" id="pl.pw.mgr.CarHire.CalculateCoststring_502"
+      name="string_50">
+    <xsd:restriction base="xsd:string">
+      <xsd:maxLength fixed="false" value="50"/>
+    </xsd:restriction>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="dateTime" id="pl.pw.mgr.CarHire.CalculateCostdateTime2"
+      name="dateTime">
+    <xsd:restriction base="xsd:dateTime"/>
+  </xsd:simpleType>
+  <xsd:simpleType ecore:name="decimal__" id="pl.pw.mgr.CarHire.CalculateCostdecimal__2"
+      name="decimal__">
+    <xsd:restriction base="xsd:decimal"/>
+  </xsd:simpleType>
+</xsd:schema>

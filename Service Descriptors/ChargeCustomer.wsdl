@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<wsdl:definitions xmlns:ns="http://www.mgr.pw.pl/CarHire/ChargeCustomer" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarHire" targetNamespace="http://www.mgr.pw.pl/CarHire/ChargeCustomer" tibex:ServiceTask="_680c8P9kEeehz8elB3v-pA" tibex:XPDL="CarHireServices.xpdl" tibex:process="_dUGFAPoIEeeGs-PDHTbgtA">
+  <wsdl:types>
+    <xsd:schema xmlns="http://www.mgr.pw.pl/CarHire/ChargeCustomer" targetNamespace="http://www.mgr.pw.pl/CarHire/ChargeCustomer">
+      <xsd:simpleType name="string_50">
+        <xsd:restriction base="xsd:string">
+          <xsd:maxLength value="50"/>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="decimal__">
+        <xsd:restriction base="xsd:decimal"/>
+      </xsd:simpleType>
+      <xsd:simpleType name="boolean">
+        <xsd:restriction base="xsd:boolean"/>
+      </xsd:simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ChargeCustomer_ChargeCustomer_INPUT">
+    <wsdl:part name="amount" type="ns:decimal__"/>
+    <wsdl:part name="customerId" type="ns:string_50"/>
+  </wsdl:message>
+  <wsdl:message name="ChargeCustomer_ChargeCustomer_OUTPUT">
+    <wsdl:part name="status" type="ns:boolean"/>
+  </wsdl:message>
+  <wsdl:portType name="ChargeCustomer" tibex:FlowContainer="_dUGFAPoIEeeGs-PDHTbgtA">
+    <wsdl:operation name="ChargeCustomer">
+      <wsdl:input message="ns:ChargeCustomer_ChargeCustomer_INPUT" tibex:Event="_680c8P9kEeehz8elB3v-pA"/>
+      <wsdl:output message="ns:ChargeCustomer_ChargeCustomer_OUTPUT" tibex:Event="_680c8P9kEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>
