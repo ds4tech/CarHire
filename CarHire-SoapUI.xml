@@ -1,0 +1,1798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="dcacf0c6-c76e-41cc-8a8e-41e8d2cf7e74" activeEnvironment="Default" name="Project 1" resourceRoot="" soapui-version="5.4.0" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="f4c0ad69-cf08-4cb0-ac52-5ec3bf93d2b4" wsaVersion="NONE" name="CalculateCost_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider}CalculateCost_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44143&amp;svc_binding_name=CalculateCost_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44143&amp;svc_binding_name=CalculateCost_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44143&amp;svc_binding_name=CalculateCost_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="CalculateCost_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider" xmlns:tns="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.mgr.pw.pl/CarHire/CalculateCost" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="dateTime">
+        <xs:restriction base="xs:dateTime"/>
+      </xs:simpleType>
+      <xs:simpleType name="decimal__">
+        <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+      <xs:simpleType name="string_50">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="50"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="CalculateCost_CalculateCost_INPUT">
+    <wsdl:part name="carId" type="ns0:string_50"/>
+    <wsdl:part name="dateFrom" type="ns0:dateTime"/>
+    <wsdl:part name="dateTo" type="ns0:dateTime"/>
+  </wsdl:message>
+  <wsdl:message name="CalculateCost_CalculateCost_OUTPUT">
+    <wsdl:part name="cost" type="ns0:decimal__"/>
+  </wsdl:message>
+  <wsdl:portType name="CalculateCost" ns1:FlowContainer="_50KkoPr3Eee95b4_qDuZwA" xmlns:ns1="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="CalculateCost">
+      <wsdl:input message="tns:CalculateCost_CalculateCost_INPUT" ns1:Event="_Sn13sP8sEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:CalculateCost_CalculateCost_OUTPUT" ns1:Event="_Sn13sP8sEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CalculateCost_EP" type="tns:CalculateCost">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="CalculateCost">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="CalculateCost"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="carId dateFrom dateTo"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="cost"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CalculateCost_Provider">
+    <wsdl:port name="CalculateCost_EP" binding="tns:CalculateCost_EP">
+      <soap:address location="http://0.0.0.0:8080/CalculateCost/CalculateCost"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/CalculateCost/CalculateCost</con:endpoint><con:endpoint>http://wxw772037:8088/mockCalculateCost_EP</con:endpoint></con:endpoints><con:operation id="756ff23b-5df1-4363-a6ba-d52a1be3d16f" isOneWay="false" action="CalculateCost" name="CalculateCost" bindingOperationName="CalculateCost" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e1bbce30-785c-4bb6-8c02-6057f9afa292" name="Request 1" wssPasswordType="PasswordText"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8088/mockCalculateCost_EP/CalculateCost</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:CalculateCost>\r
+         <carId>3</carId>\r
+         <dateFrom></dateFrom>\r
+         <dateTo></dateTo>\r
+      </cal:CalculateCost>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:selectedAuthProfile>No Authorization</con:selectedAuthProfile><con:addedBasicAuthenticationTypes>Basic</con:addedBasicAuthenticationTypes><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="CalculateCost"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3da8b26c-3c74-4245-85d7-dd39a506e128" wsaVersion="NONE" name="ChargeCustomer_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider}ChargeCustomer_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44138&amp;svc_binding_name=ChargeCustomer_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44138&amp;svc_binding_name=ChargeCustomer_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44138&amp;svc_binding_name=ChargeCustomer_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="ChargeCustomer_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider" xmlns:tns="http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.mgr.pw.pl/CarHire/ChargeCustomer" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/ChargeCustomer" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:simpleType name="boolean">
+        <xs:restriction base="xs:boolean"/>
+      </xs:simpleType>
+      <xs:simpleType name="decimal__">
+        <xs:restriction base="xs:decimal"/>
+      </xs:simpleType>
+      <xs:simpleType name="string_50">
+        <xs:restriction base="xs:string">
+          <xs:maxLength value="50"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="ChargeCustomer_ChargeCustomer_INPUT">
+    <wsdl:part name="amount" type="ns0:decimal__"/>
+    <wsdl:part name="customerId" type="ns0:string_50"/>
+  </wsdl:message>
+  <wsdl:message name="ChargeCustomer_ChargeCustomer_OUTPUT">
+    <wsdl:part name="status" type="ns0:boolean"/>
+  </wsdl:message>
+  <wsdl:portType name="ChargeCustomer" ns1:FlowContainer="_dUGFAPoIEeeGs-PDHTbgtA" xmlns:ns1="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="ChargeCustomer">
+      <wsdl:input message="tns:ChargeCustomer_ChargeCustomer_INPUT" ns1:Event="_680c8P9kEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:ChargeCustomer_ChargeCustomer_OUTPUT" ns1:Event="_680c8P9kEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ChargeCustomer_EP" type="tns:ChargeCustomer">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="ChargeCustomer">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="ChargeCustomer"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="amount customerId"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="status"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ChargeCustomer_Provider">
+    <wsdl:port name="ChargeCustomer_EP" binding="tns:ChargeCustomer_EP">
+      <soap:address location="http://0.0.0.0:8080/ChargeCustomer/ChargeCustomer"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/ChargeCustomer/ChargeCustomer</con:endpoint><con:endpoint>http://wxw772037:8088/mockChargeCustomer_EP</con:endpoint></con:endpoints><con:operation id="6e2efbe0-b9e7-4b87-9bc5-e0ec4048bd88" isOneWay="false" action="ChargeCustomer" name="ChargeCustomer" bindingOperationName="ChargeCustomer" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="8e461f6a-e8c5-492a-bcb2-1628f4c57e6a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/ChargeCustomer/ChargeCustomer</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:char="http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <char:ChargeCustomer>\r
+         <amount>?</amount>\r
+         <customerId>?</customerId>\r
+      </char:ChargeCustomer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="ChargeCustomer"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="b02830a8-44ec-4945-bba6-65571f8d777b" wsaVersion="NONE" name="GetBookingData_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider}GetBookingData_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44133&amp;svc_binding_name=GetBookingData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44133&amp;svc_binding_name=GetBookingData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44133&amp;svc_binding_name=GetBookingData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="GetBookingData_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/GetBookingData" xmlns:tns="http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/GetBookingData" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/GetBookingData"/>
+      <xs:import namespace="http://mgr/carhire"/>
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/GetBookingData"/>
+      <xs:import namespace="http://mgr/carhire"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetBookingData_GetBookingData_INPUT">
+    <wsdl:part name="Booking" type="ns0:Booking"/>
+  </wsdl:message>
+  <wsdl:message name="GetBookingData_GetBookingData_OUTPUT">
+    <wsdl:part name="Booking" type="ns0:Booking"/>
+  </wsdl:message>
+  <wsdl:portType name="GetBookingData" ns2:FlowContainer="_dNEscPoHEeeGs-PDHTbgtA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="GetBookingData">
+      <wsdl:input message="tns:GetBookingData_GetBookingData_INPUT" ns2:Event="_ex5VQfRhEeeCheHsxjQ5WQ"/>
+      <wsdl:output message="tns:GetBookingData_GetBookingData_OUTPUT" ns2:Event="_ex5VQfRhEeeCheHsxjQ5WQ"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetBookingData_EP" type="tns:GetBookingData">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetBookingData">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="GetBookingData"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="Booking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="Booking"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetBookingData_Provider">
+    <wsdl:port name="GetBookingData_EP" binding="tns:GetBookingData_EP">
+      <soap:address location="http://0.0.0.0:8080/GetBookingData/GetBookingData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/GetBookingData/GetBookingData</con:endpoint><con:endpoint>http://wxw772037:8088/mockGetBookingData_EP</con:endpoint></con:endpoints><con:operation id="9303ef3f-f3fa-4bd4-a079-333c5bf1f6a4" isOneWay="false" action="GetBookingData" name="GetBookingData" bindingOperationName="GetBookingData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="a2ed3e1a-6f61-4202-b27d-3aa84bde57eb" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetBookingData/GetBookingData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetBookingData>\r
+         <Booking>\r
+            <!--Optional:-->\r
+            <bookingRef>?</bookingRef>\r
+            <!--Optional:-->\r
+            <carId>?</carId>\r
+            <!--Optional:-->\r
+            <customerId>?</customerId>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <state>?</state>\r
+         </Booking>\r
+      </get:GetBookingData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetBookingData"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="f4775bf0-8e97-4639-9265-293a0280fca1" wsaVersion="NONE" name="GetCarData_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider}GetCarData_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44128&amp;svc_binding_name=GetCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44128&amp;svc_binding_name=GetCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44128&amp;svc_binding_name=GetCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="GetCarData_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/GetCarDdata" xmlns:tns="http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/GetCarDdata"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Cars">
+        <xs:sequence>
+          <xs:element name="cars" form="unqualified" type="ns0:CarData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CarsElement" type="ns0:Cars"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/GetCarDdata" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+  </wsdl:types>
+  <wsdl:message name="GetCarData_GetCarData_INPUT">
+    <wsdl:part name="CarData" type="ns0:CarData"/>
+  </wsdl:message>
+  <wsdl:message name="GetCarData_GetCarData_OUTPUT">
+    <wsdl:part name="CarData" type="ns0:CarData"/>
+  </wsdl:message>
+  <wsdl:portType name="GetCarData" ns2:FlowContainer="_r3aPYPoGEeeGs-PDHTbgtA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="GetCarData">
+      <wsdl:input message="tns:GetCarData_GetCarData_INPUT" ns2:Event="_vte-kfRfEeeCheHsxjQ5WQ"/>
+      <wsdl:output message="tns:GetCarData_GetCarData_OUTPUT" ns2:Event="_vte-kfRfEeeCheHsxjQ5WQ"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetCarData_EP" type="tns:GetCarData">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCarData">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="GetCarData"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="CarData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="CarData"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetCarData_Provider">
+    <wsdl:port name="GetCarData_EP" binding="tns:GetCarData_EP">
+      <soap:address location="http://0.0.0.0:8080/GetCarData/GetCarData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/GetCarData/GetCarData</con:endpoint><con:endpoint>http://wxw772037:8088/mockGetCarData_EP</con:endpoint></con:endpoints><con:operation id="ada67a99-2d25-482f-a468-3320f8fff5c6" isOneWay="false" action="GetCarData" name="GetCarData" bindingOperationName="GetCarData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="965d8d75-0487-4141-b9e6-2359a4c2b9e2" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetCarData/GetCarData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetCarData>\r
+         <CarData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </CarData>\r
+      </get:GetCarData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetCarData"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="3915fc9a-453f-4e9d-8e3b-67191fd0edca" wsaVersion="NONE" name="GetCustomerData_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider}GetCustomerData_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44123&amp;svc_binding_name=GetCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44123&amp;svc_binding_name=GetCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44123&amp;svc_binding_name=GetCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="GetCustomerData_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/GetCustomerData" xmlns:tns="http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/GetCustomerData" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/GetCustomerData"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Cars">
+        <xs:sequence>
+          <xs:element name="cars" form="unqualified" type="ns0:CarData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CarsElement" type="ns0:Cars"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCustomerData_GetCustomerData_INPUT">
+    <wsdl:part name="CustomerData" type="ns0:CustomerData"/>
+  </wsdl:message>
+  <wsdl:message name="GetCustomerData_GetCustomerData_OUTPUT">
+    <wsdl:part name="CustomerData" type="ns0:CustomerData"/>
+  </wsdl:message>
+  <wsdl:portType name="GetCustomerData" ns2:FlowContainer="_BBFiYPoIEeeGs-PDHTbgtA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="GetCustomerData">
+      <wsdl:input message="tns:GetCustomerData_GetCustomerData_INPUT" ns2:Event="__ah8AP8wEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:GetCustomerData_GetCustomerData_OUTPUT" ns2:Event="__ah8AP8wEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="GetCustomerData_EP" type="tns:GetCustomerData">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetCustomerData">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="GetCustomerData"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="CustomerData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="CustomerData"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="GetCustomerData_Provider">
+    <wsdl:port name="GetCustomerData_EP" binding="tns:GetCustomerData_EP">
+      <soap:address location="http://0.0.0.0:8080/GetCustomerData/GetCustomerData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/GetCustomerData/GetCustomerData</con:endpoint><con:endpoint>http://wxw772037:8088/mockGetCustomerData_EP</con:endpoint></con:endpoints><con:operation id="67805983-08e3-4475-91e1-6c14fc474138" isOneWay="false" action="GetCustomerData" name="GetCustomerData" bindingOperationName="GetCustomerData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="fa9be829-c04b-4e86-a230-7a0dc5933ad1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetCustomerData/GetCustomerData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetCustomerData>\r
+         <CustomerData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <surname>?</surname>\r
+            <!--Optional:-->\r
+            <address>?</address>\r
+            <!--Optional:-->\r
+            <credit>?</credit>\r
+         </CustomerData>\r
+      </get:GetCustomerData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetCustomerData"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="9ce7f496-2e8b-4124-a30c-e0c9384e11c5" wsaVersion="NONE" name="SearchCars_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider}SearchCars_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44118&amp;svc_binding_name=SearchCars_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44118&amp;svc_binding_name=SearchCars_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44118&amp;svc_binding_name=SearchCars_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="SearchCars_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/SearchCars" xmlns:tns="http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/SearchCars" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/SearchCars"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Cars">
+        <xs:sequence>
+          <xs:element name="cars" form="unqualified" type="ns0:CarData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CarsElement" type="ns0:Cars"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="SearchCars_SearchCars_INPUT">
+    <wsdl:part name="carData" type="ns0:CarData"/>
+  </wsdl:message>
+  <wsdl:message name="SearchCars_SearchCars_OUTPUT">
+    <wsdl:part name="cars" type="ns0:Cars"/>
+  </wsdl:message>
+  <wsdl:portType name="SearchCars" ns2:FlowContainer="_nMgLAPn8EeeGs-PDHTbgtA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="SearchCars">
+      <wsdl:input message="tns:SearchCars_SearchCars_INPUT" ns2:Event="_nvrJgPn8EeeGs-PDHTbgtA"/>
+      <wsdl:output message="tns:SearchCars_SearchCars_OUTPUT" ns2:Event="_nvrJgPn8EeeGs-PDHTbgtA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SearchCars_EP" type="tns:SearchCars">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="SearchCars">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="SearchCars"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="carData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="cars"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SearchCars_Provider">
+    <wsdl:port name="SearchCars_EP" binding="tns:SearchCars_EP">
+      <soap:address location="http://0.0.0.0:8080/SearchCars/SearchCars"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/SearchCars/SearchCars</con:endpoint><con:endpoint>http://wxw772037:8088/mockSearchCars_EP</con:endpoint></con:endpoints><con:operation id="d0b8d719-c093-4692-bb7a-b7bed35936f7" isOneWay="false" action="SearchCars" name="SearchCars" bindingOperationName="SearchCars" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="bfc31fb2-724e-4921-be77-58c455c935e1" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/SearchCars/SearchCars</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:SearchCars>\r
+         <carData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </carData>\r
+      </sear:SearchCars>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="SearchCars"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="bda5e035-2096-459c-b97f-360756f9204b" wsaVersion="NONE" name="UpdateBooking_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider}UpdateBooking_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44113&amp;svc_binding_name=UpdateBooking_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44113&amp;svc_binding_name=UpdateBooking_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44113&amp;svc_binding_name=UpdateBooking_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="UpdateBooking_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/UpdateBooking" xmlns:tns="http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateBooking" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/UpdateBooking"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Cars">
+        <xs:sequence>
+          <xs:element name="cars" form="unqualified" type="ns0:CarData" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:decimal">
+                <xs:totalDigits value="10"/>
+                <xs:fractionDigits value="2"/>
+                <xs:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CarsElement" type="ns0:Cars"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateBooking_UpdateBooking_INPUT">
+    <wsdl:part name="Booking" type="ns0:Booking"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateBooking_UpdateBooking_OUTPUT">
+    <wsdl:part name="Booking" type="ns0:Booking"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateBooking" ns2:FlowContainer="_NNe4sPoGEeeGs-PDHTbgtA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="UpdateBooking">
+      <wsdl:input message="tns:UpdateBooking_UpdateBooking_INPUT" ns2:Event="_eHexgP8xEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:UpdateBooking_UpdateBooking_OUTPUT" ns2:Event="_eHexgP8xEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateBooking_EP" type="tns:UpdateBooking">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="UpdateBooking">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="UpdateBooking"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="Booking"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="Booking"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateBooking_Provider">
+    <wsdl:port name="UpdateBooking_EP" binding="tns:UpdateBooking_EP">
+      <soap:address location="http://0.0.0.0:8080/UpdateBooking/UpdateBooking"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/UpdateBooking/UpdateBooking</con:endpoint><con:endpoint>http://wxw772037:8088/mockUpdateBooking_EP</con:endpoint></con:endpoints><con:operation id="6c28e354-5956-448d-8df3-1ce28013fef0" isOneWay="false" action="UpdateBooking" name="UpdateBooking" bindingOperationName="UpdateBooking" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="93322937-a831-4dbc-a8f4-c0d9f75e0d96" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateBooking/UpdateBooking</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateBooking>\r
+         <Booking>\r
+            <!--Optional:-->\r
+            <bookingRef>?</bookingRef>\r
+            <!--Optional:-->\r
+            <carId>?</carId>\r
+            <!--Optional:-->\r
+            <customerId>?</customerId>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <state>?</state>\r
+         </Booking>\r
+      </upd:UpdateBooking>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateBooking"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="be44a79b-b86e-4dcb-8f0e-1f9cfb8e942b" wsaVersion="NONE" name="UpdateCarData_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider}UpdateCarData_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44108&amp;svc_binding_name=UpdateCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44108&amp;svc_binding_name=UpdateCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44108&amp;svc_binding_name=UpdateCarData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="UpdateCarData_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/UpdateCarData" xmlns:tns="http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateCarData" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/UpdateCarData"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" type="ns0:double_StudioGeneratedTemplate" minOccurs="0"/>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" type="ns0:double_StudioGeneratedTemplate" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="double_StudioGeneratedTemplate">
+        <xs:restriction base="xs:double">
+          <xs:minInclusive value="-1.7976931348623157E308"/>
+          <xs:maxInclusive value="1.7976931348623157E308"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateCarData_UpdateCarData_INPUT">
+    <wsdl:part name="CarData" type="ns0:CarData"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateCarData_UpdateCarData_OUTPUT">
+    <wsdl:part name="CarData" type="ns0:CarData"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateCarData" ns2:FlowContainer="_s5tu8vrMEee95b4_qDuZwA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="UpdateCarData">
+      <wsdl:input message="tns:UpdateCarData_UpdateCarData_INPUT" ns2:Event="_YpVKIP9aEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:UpdateCarData_UpdateCarData_OUTPUT" ns2:Event="_YpVKIP9aEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateCarData_EP" type="tns:UpdateCarData">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="UpdateCarData">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="UpdateCarData"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="CarData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="CarData"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateCarData_Provider">
+    <wsdl:port name="UpdateCarData_EP" binding="tns:UpdateCarData_EP">
+      <soap:address location="http://0.0.0.0:8080/UpdateCarData/UpdateCarData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/UpdateCarData/UpdateCarData</con:endpoint><con:endpoint>http://wxw772037:8088/mockUpdateCarData_EP</con:endpoint></con:endpoints><con:operation id="424a4f48-f071-43c6-bff9-d08912cdde4a" isOneWay="false" action="UpdateCarData" name="UpdateCarData" bindingOperationName="UpdateCarData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d427e079-9716-4f52-b30c-43d95fabb798" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateCarData/UpdateCarData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateCarData>\r
+         <CarData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </CarData>\r
+      </upd:UpdateCarData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateCarData"/></con:call></con:operation></con:interface><con:interface xsi:type="con:WsdlInterface" id="8d881db8-4472-4e06-aba0-95fb237dfa23" wsaVersion="NONE" name="UpdateCustomerData_EP" type="wsdl" bindingName="{http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider}UpdateCustomerData_EP" soapVersion="1_1" anonymous="optional" definition="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44103&amp;svc_binding_name=UpdateCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44103&amp;svc_binding_name=UpdateCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode"><con:part><con:url>http://hogget:8120/amxadministrator/generate_wsdl?svc_binding_id=44103&amp;svc_binding_name=UpdateCustomerData_EP&amp;svc_node_id=3361&amp;svc_node_name=BPMNode</con:url><con:content><![CDATA[<!--Created by TIBCO WSDL-->
+<wsdl:definitions name="UpdateCustomerData_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider" xmlns:ns1="http://www.mgr.pw.pl/CarHire/UpdateCustomerData" xmlns:tns="http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://mgr/carhire" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:types>
+    <xs:schema targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateCustomerData" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema"/>
+    <xs:schema targetNamespace="http://mgr/carhire" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://www.mgr.pw.pl/CarHire/UpdateCustomerData"/>
+      <xs:annotation>
+        <xs:documentation>
+          <ns0:DocumentationElement BOMORIGIN="/CarHire/Data Model/CarHire.bom"/>
+        </xs:documentation>
+      </xs:annotation>
+      <xs:complexType name="Booking">
+        <xs:sequence>
+          <xs:element name="bookingRef" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="carId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="customerId" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="dateFrom" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="dateTo" form="unqualified" type="xs:dateTime" minOccurs="0"/>
+          <xs:element name="state" form="unqualified" type="ns0:bookingState" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CarData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="costPerDay" form="unqualified" type="ns0:double_StudioGeneratedTemplate" minOccurs="0"/>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="manufacturer" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="class1" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="horsepower" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="seats" form="unqualified" type="xs:int" minOccurs="0"/>
+          <xs:element name="isDamaged" form="unqualified" default="false" type="xs:boolean" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="CustomerData">
+        <xs:sequence>
+          <xs:element name="id" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="name" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="surname" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="address" form="unqualified" minOccurs="0">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:maxLength value="50"/>
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:element>
+          <xs:element name="credit" form="unqualified" type="ns0:double_StudioGeneratedTemplate" minOccurs="0"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:simpleType name="bookingState">
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="NEW"/>
+          <xs:enumeration value="INPROGRESS"/>
+          <xs:enumeration value="CLOSED"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:simpleType name="double_StudioGeneratedTemplate">
+        <xs:restriction base="xs:double">
+          <xs:minInclusive value="-1.7976931348623157E308"/>
+          <xs:maxInclusive value="1.7976931348623157E308"/>
+        </xs:restriction>
+      </xs:simpleType>
+      <xs:element name="BookingElement" type="ns0:Booking"/>
+      <xs:element name="CarDataElement" type="ns0:CarData"/>
+      <xs:element name="CustomerDataElement" type="ns0:CustomerData"/>
+      <xs:element name="bookingStateElement">
+        <xs:simpleType>
+          <xs:restriction base="ns0:bookingState"/>
+        </xs:simpleType>
+      </xs:element>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="UpdateCustomerData_UpdateCustomerData_INPUT">
+    <wsdl:part name="CustomerData" type="ns0:CustomerData"/>
+  </wsdl:message>
+  <wsdl:message name="UpdateCustomerData_UpdateCustomerData_OUTPUT">
+    <wsdl:part name="CustomerData" type="ns0:CustomerData"/>
+  </wsdl:message>
+  <wsdl:portType name="UpdateCustomerData" ns2:FlowContainer="_Wc7nnPrGEee95b4_qDuZwA" xmlns:ns2="http://www.tibco.com/bs3.2/extensions">
+    <wsdl:operation name="UpdateCustomerData">
+      <wsdl:input message="tns:UpdateCustomerData_UpdateCustomerData_INPUT" ns2:Event="_4PuJEP9aEeehz8elB3v-pA"/>
+      <wsdl:output message="tns:UpdateCustomerData_UpdateCustomerData_OUTPUT" ns2:Event="_4PuJEP9aEeehz8elB3v-pA"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UpdateCustomerData_EP" type="tns:UpdateCustomerData">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="UpdateCustomerData">
+      <wsdl:documentation/>
+      <soap:operation style="rpc" soapAction="UpdateCustomerData"/>
+      <wsdl:input>
+        <soap:body use="literal" parts="CustomerData"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" parts="CustomerData"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UpdateCustomerData_Provider">
+    <wsdl:port name="UpdateCustomerData_EP" binding="tns:UpdateCustomerData_EP">
+      <soap:address location="http://0.0.0.0:8080/UpdateCustomerData/UpdateCustomerData"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://0.0.0.0:8080/UpdateCustomerData/UpdateCustomerData</con:endpoint><con:endpoint>http://wxw772037:8088/mockUpdateCustomerData_EP</con:endpoint></con:endpoints><con:operation id="c34f1c97-9a69-4f99-9d0b-4a09862a5f71" isOneWay="false" action="UpdateCustomerData" name="UpdateCustomerData" bindingOperationName="UpdateCustomerData" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="0a2aa3ba-bb23-4975-bd14-52315804a545" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateCustomerData/UpdateCustomerData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateCustomerData>\r
+         <CustomerData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <surname>?</surname>\r
+            <!--Optional:-->\r
+            <address>?</address>\r
+            <!--Optional:-->\r
+            <credit>?</credit>\r
+         </CustomerData>\r
+      </upd:UpdateCustomerData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateCustomerData"/></con:call></con:operation></con:interface><con:testSuite id="aa3ba9d8-6d5d-4a43-b0bb-d5bc81632903" name="CalculateCost_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="c27f3f98-c3f2-4242-8fdd-2e22b3676735" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="CalculateCost TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="30014362-396f-4f12-847a-17774cb106d2" name="CalculateCost"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CalculateCost_EP</con:interface><con:operation>CalculateCost</con:operation><con:request name="CalculateCost" id="ac3ca7ef-d9e3-4ddd-ba33-525b7d1034fb"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/CalculateCost/CalculateCost</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cal:CalculateCost>\r
+         <carId>?</carId>\r
+         <dateFrom>?</dateFrom>\r
+         <dateTo>?</dateTo>\r
+      </cal:CalculateCost>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="CalculateCost"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="14a080da-7ef7-48c4-aae2-21e9f1c9fa97" name="ChargeCustomer_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="67c73dc6-9449-4d07-99f3-0e19456572c7" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="ChargeCustomer TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="752c52c3-e01d-4ef4-b0ab-b039a481c9a3" name="ChargeCustomer"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>ChargeCustomer_EP</con:interface><con:operation>ChargeCustomer</con:operation><con:request name="ChargeCustomer" id="d4dda066-8abf-495c-9cf1-3fbc90befc20"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/ChargeCustomer/ChargeCustomer</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:char="http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <char:ChargeCustomer>\r
+         <amount>?</amount>\r
+         <customerId>?</customerId>\r
+      </char:ChargeCustomer>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="ChargeCustomer"/></con:request></con:config></con:testStep><con:loadTest id="c956ec29-c2d3-4df0-830e-8c0189b16d3f" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="b9210949-2f27-4ed1-90ac-08c3b6de1506" name="GetBookingData_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6f23134d-cf9c-4bf9-8cf2-fc26ff3f0984" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetBookingData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="3d3a22cd-8891-45f8-8cf8-e727cf815d7e" name="GetBookingData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetBookingData_EP</con:interface><con:operation>GetBookingData</con:operation><con:request name="GetBookingData" id="cb5db4c7-6a7b-4021-a09e-eac2893baf4a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetBookingData/GetBookingData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetBookingData>\r
+         <Booking>\r
+            <!--Optional:-->\r
+            <bookingRef>?</bookingRef>\r
+            <!--Optional:-->\r
+            <carId>?</carId>\r
+            <!--Optional:-->\r
+            <customerId>?</customerId>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <state>?</state>\r
+         </Booking>\r
+      </get:GetBookingData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetBookingData"/></con:request></con:config></con:testStep><con:loadTest id="68ef14eb-5805-4f46-a56d-7113c0a6ec1f" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="a2dd7cc9-89a4-4bfa-b8f1-77b61f375fae" name="GetCarData_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="4868a8a5-74b3-4d7d-aca2-f1b6e9b58b56" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCarData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="f8b2768e-d42c-417f-9a65-eb0f814f56d6" name="GetCarData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCarData_EP</con:interface><con:operation>GetCarData</con:operation><con:request name="GetCarData" id="1b61b8fb-16f3-40c4-a225-20d28097f441"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetCarData/GetCarData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetCarData>\r
+         <CarData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </CarData>\r
+      </get:GetCarData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetCarData"/></con:request></con:config></con:testStep><con:loadTest id="074baf5e-74ae-45b2-aa38-adb6f0bee968" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="d8cf855e-6226-4091-ae8c-d78e6b9c866c" name="GetCustomerData_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="a22909e7-64dd-40bf-ab1c-3cf58a852a9f" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="GetCustomerData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="102eb2db-9778-4b47-a643-2f47d9b2279d" name="GetCustomerData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>GetCustomerData_EP</con:interface><con:operation>GetCustomerData</con:operation><con:request name="GetCustomerData" id="5736b4c5-b080-4a68-931c-2041a932be26"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/GetCustomerData/GetCustomerData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <get:GetCustomerData>\r
+         <CustomerData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <surname>?</surname>\r
+            <!--Optional:-->\r
+            <address>?</address>\r
+            <!--Optional:-->\r
+            <credit>?</credit>\r
+         </CustomerData>\r
+      </get:GetCustomerData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="GetCustomerData"/></con:request></con:config></con:testStep><con:loadTest id="e626dc0e-650a-402c-8219-8f91c227e784" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="2e8db103-f8b6-49ef-a9c9-4382825f9b29" name="SearchCars_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="bc0f34eb-d061-4dfd-bd69-1ba1078440d8" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SearchCars TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="2acb653a-1509-4598-8395-47cd5d82d2e4" name="SearchCars"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>SearchCars_EP</con:interface><con:operation>SearchCars</con:operation><con:request name="SearchCars" id="4fc31489-b5dc-4184-b66a-090428ce9dd8"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/SearchCars/SearchCars</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <sear:SearchCars>\r
+         <carData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </carData>\r
+      </sear:SearchCars>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="SearchCars"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="39ddd1e4-3373-45c8-86e7-6a7c299fdd3e" name="UpdateBooking_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="de6bc5c9-ab5c-4abd-a798-3e45a40d9562" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateBooking TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="785dfac6-9ca5-4502-98f0-ece1b1406751" name="UpdateBooking"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateBooking_EP</con:interface><con:operation>UpdateBooking</con:operation><con:request name="UpdateBooking" id="165da80d-23c6-4a8c-bbf6-d020cd27f4e1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateBooking/UpdateBooking</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateBooking>\r
+         <Booking>\r
+            <!--Optional:-->\r
+            <bookingRef>?</bookingRef>\r
+            <!--Optional:-->\r
+            <carId>?</carId>\r
+            <!--Optional:-->\r
+            <customerId>?</customerId>\r
+            <!--Optional:-->\r
+            <dateFrom>?</dateFrom>\r
+            <!--Optional:-->\r
+            <dateTo>?</dateTo>\r
+            <!--Optional:-->\r
+            <state>?</state>\r
+         </Booking>\r
+      </upd:UpdateBooking>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="UpdateBooking"/></con:request></con:config></con:testStep><con:loadTest id="437d35d2-a1f1-4e31-8ac8-c965af6409d0" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="896677aa-2a7a-4114-be84-3dd877a909e5" name="UpdateCarData_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="2bd93001-5439-41fa-89ec-4a0cab750b1d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateCarData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="a8f5be28-5fbb-4e7d-bdce-4a7c06eb629a" name="UpdateCarData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateCarData_EP</con:interface><con:operation>UpdateCarData</con:operation><con:request name="UpdateCarData" id="5a1c4038-e557-45b0-a1f8-cfbc42634d8a"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateCarData/UpdateCarData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateCarData>\r
+         <CarData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <costPerDay>?</costPerDay>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <manufacturer>?</manufacturer>\r
+            <!--Optional:-->\r
+            <class1>?</class1>\r
+            <!--Optional:-->\r
+            <horsepower>?</horsepower>\r
+            <!--Optional:-->\r
+            <seats>?</seats>\r
+            <!--Optional:-->\r
+            <isDamaged>false</isDamaged>\r
+         </CarData>\r
+      </upd:UpdateCarData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="UpdateCarData"/></con:request></con:config></con:testStep><con:loadTest id="49cb1080-d399-4f73-913d-4447bcdc98b5" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:testSuite id="709152d1-25a1-4b4a-b9bf-aa4696f7d7b4" name="UpdateCustomerData_EP TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="53544c60-6963-4735-be0c-d6b1198b867d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="UpdateCustomerData TestCase" searchProperties="true"><con:settings/><con:testStep type="request" id="d3a44de7-cf28-4121-bef4-5a4c06db919e" name="UpdateCustomerData"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>UpdateCustomerData_EP</con:interface><con:operation>UpdateCustomerData</con:operation><con:request name="UpdateCustomerData" id="67dfd2d8-9ea9-45a6-8993-f0415954e77e"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://0.0.0.0:8080/UpdateCustomerData/UpdateCustomerData</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <upd:UpdateCustomerData>\r
+         <CustomerData>\r
+            <!--Optional:-->\r
+            <id>?</id>\r
+            <!--Optional:-->\r
+            <name>?</name>\r
+            <!--Optional:-->\r
+            <surname>?</surname>\r
+            <!--Optional:-->\r
+            <address>?</address>\r
+            <!--Optional:-->\r
+            <credit>?</credit>\r
+         </CustomerData>\r
+      </upd:UpdateCustomerData>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:wsaConfig action="UpdateCustomerData"/></con:request></con:config></con:testStep><con:loadTest id="596dadff-b473-4ce0-b0df-ff03d228596a" name="LoadTest 1"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>60</con:testLimit><con:limitType>TIME</con:limitType><con:loadStrategy><con:type>Simple</con:type></con:loadStrategy><con:assertion type="Step Status" name="Step Status"/><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:mockService id="5a3d5a21-86af-4e5b-ae32-f3bf3abbfa33" port="8088" path="/mockCalculateCost_EP" host="wxw772037" name="CalculateCost_EP MockService" incomingWss="" outgoingWss=""><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="CalculateCost" id="e19e7623-67de-47f8-890f-6739083623f4" interface="CalculateCost_EP" operation="CalculateCost"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="7fe00168-34af-4e94-95c1-10845daac877" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cal="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <cal:CalculateCostResponse>
+         <cost>66</cost>
+      </cal:CalculateCostResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="CalculateCost"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="c3d277ad-b21b-45be-aa52-8cb591a4bfc2" port="8088" path="/mockChargeCustomer_EP" host="wxw772037" name="ChargeCustomer_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="ChargeCustomer" id="01eb1d11-7e51-4598-81c1-ead6dc9cc164" interface="ChargeCustomer_EP" operation="ChargeCustomer"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="894163c3-2332-40aa-86c5-c9939a399c95" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:char="http://www.mgr.pw.pl/CarHire/ChargeCustomer/ChargeCustomer_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <char:ChargeCustomerResponse>
+         <status>?</status>
+      </char:ChargeCustomerResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="ChargeCustomer"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="464fe566-46fe-4025-bd82-7f4574a2c313" port="8088" path="/mockGetBookingData_EP" host="wxw772037" name="GetBookingData_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetBookingData" id="4321e339-92e5-45c4-9122-90eeb5c9fc1b" interface="GetBookingData_EP" operation="GetBookingData"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="15fdcda7-a44f-4f1a-8414-341ff7092cc5" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetBookingData/GetBookingData_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <get:GetBookingDataResponse>
+         <Booking>
+            <!--Optional:-->
+            <bookingRef>?</bookingRef>
+            <!--Optional:-->
+            <carId>?</carId>
+            <!--Optional:-->
+            <customerId>?</customerId>
+            <!--Optional:-->
+            <dateFrom>?</dateFrom>
+            <!--Optional:-->
+            <dateTo>?</dateTo>
+            <!--Optional:-->
+            <state>?</state>
+         </Booking>
+      </get:GetBookingDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetBookingData"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="4d3f8027-c956-4d26-a487-0d1e08fdc82c" port="8088" path="/mockGetCarData_EP" host="wxw772037" name="GetCarData_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCarData" id="8d0cc4fb-1cc9-4cd4-a951-4c5490da42ce" interface="GetCarData_EP" operation="GetCarData"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="60b2777d-5167-4c56-9117-fc928a6ee6cc" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCarDdata/GetCarData_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <get:GetCarDataResponse>
+         <CarData>
+            <!--Optional:-->
+            <id>?</id>
+            <!--Optional:-->
+            <costPerDay>?</costPerDay>
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <manufacturer>?</manufacturer>
+            <!--Optional:-->
+            <class1>?</class1>
+            <!--Optional:-->
+            <horsepower>?</horsepower>
+            <!--Optional:-->
+            <seats>?</seats>
+            <!--Optional:-->
+            <isDamaged>false</isDamaged>
+         </CarData>
+      </get:GetCarDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetCarData"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="73f8b72f-ab11-490f-97dd-14ece0586d47" port="8088" path="/mockGetCustomerData_EP" host="wxw772037" name="GetCustomerData_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="GetCustomerData" id="122759b4-abe7-4b8e-888a-5a098932178f" interface="GetCustomerData_EP" operation="GetCustomerData"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="b6ffaf65-d3b8-4403-a0e0-b5553596c53e" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:get="http://www.mgr.pw.pl/CarHire/GetCustomerData/GetCustomerData_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <get:GetCustomerDataResponse>
+         <CustomerData>
+            <!--Optional:-->
+            <id>?</id>
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <surname>?</surname>
+            <!--Optional:-->
+            <address>?</address>
+            <!--Optional:-->
+            <credit>?</credit>
+         </CustomerData>
+      </get:GetCustomerDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="GetCustomerData"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="4276c6f4-7cff-40be-ba80-275cd33532dd" port="8088" path="/mockSearchCars_EP" host="wxw772037" name="SearchCars_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="SearchCars" id="8ff88413-201f-460a-8a77-7b4189df02f5" interface="SearchCars_EP" operation="SearchCars"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="27ab8e15-32c8-40ec-bc6d-391805c3a041" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sear="http://www.mgr.pw.pl/CarHire/SearchCars/SearchCars_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sear:SearchCarsResponse>
+         <cars>
+            <!--Zero or more repetitions:-->
+            <cars>
+               <!--Optional:-->
+               <id>?</id>
+               <!--Optional:-->
+               <costPerDay>?</costPerDay>
+               <!--Optional:-->
+               <name>?</name>
+               <!--Optional:-->
+               <manufacturer>?</manufacturer>
+               <!--Optional:-->
+               <class1>?</class1>
+               <!--Optional:-->
+               <horsepower>?</horsepower>
+               <!--Optional:-->
+               <seats>?</seats>
+               <!--Optional:-->
+               <isDamaged>false</isDamaged>
+            </cars>
+         </cars>
+      </sear:SearchCarsResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="SearchCars"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="ef73db36-adef-494e-8d27-ae5e6bccdbc6" port="8088" path="/mockUpdateBooking_EP" host="wxw772037" name="UpdateBooking_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="UpdateBooking" id="43f44a83-6e70-45eb-a51c-782fc783a77f" interface="UpdateBooking_EP" operation="UpdateBooking"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="cad419de-e36d-4432-8ebc-87e7a11c4ca0" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateBooking/UpdateBooking_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <upd:UpdateBookingResponse>
+         <Booking>
+            <!--Optional:-->
+            <bookingRef>?</bookingRef>
+            <!--Optional:-->
+            <carId>?</carId>
+            <!--Optional:-->
+            <customerId>?</customerId>
+            <!--Optional:-->
+            <dateFrom>?</dateFrom>
+            <!--Optional:-->
+            <dateTo>?</dateTo>
+            <!--Optional:-->
+            <state>?</state>
+         </Booking>
+      </upd:UpdateBookingResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateBooking"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="4a3f8e29-872e-4881-8dd5-f1e40b362b73" port="8088" path="/mockUpdateCarData_EP" host="wxw772037" name="UpdateCarData_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="UpdateCarData" id="48e27c92-eb6e-43c1-a039-e39d80967f93" interface="UpdateCarData_EP" operation="UpdateCarData"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="cecbfcb7-f738-4fb9-b299-f88c076af4d0" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCarData/UpdateCarData_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <upd:UpdateCarDataResponse>
+         <CarData>
+            <!--Optional:-->
+            <id>?</id>
+            <!--Optional:-->
+            <costPerDay>?</costPerDay>
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <manufacturer>?</manufacturer>
+            <!--Optional:-->
+            <class1>?</class1>
+            <!--Optional:-->
+            <horsepower>?</horsepower>
+            <!--Optional:-->
+            <seats>?</seats>
+            <!--Optional:-->
+            <isDamaged>false</isDamaged>
+         </CarData>
+      </upd:UpdateCarDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateCarData"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:mockService id="2f6170e4-15f7-4c91-8541-649c38df35c0" port="8088" path="/mockUpdateCustomerData_EP" host="wxw772037" name="UpdateCustomerData_EP MockService"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.mock.WsdlMockService@require-soap-action">false</con:setting></con:settings><con:properties/><con:mockOperation name="UpdateCustomerData" id="ced7e198-38f8-47e7-8aef-d2d24e56557e" interface="UpdateCustomerData_EP" operation="UpdateCustomerData"><con:settings/><con:defaultResponse>Response 1</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:response name="Response 1" id="c7f69c4c-a49f-414b-94e3-dae089a010df" httpResponseStatus="200" encoding="UTF-8"><con:settings/><con:responseContent><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:upd="http://www.mgr.pw.pl/CarHire/UpdateCustomerData/UpdateCustomerData_Provider">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <upd:UpdateCustomerDataResponse>
+         <CustomerData>
+            <!--Optional:-->
+            <id>?</id>
+            <!--Optional:-->
+            <name>?</name>
+            <!--Optional:-->
+            <surname>?</surname>
+            <!--Optional:-->
+            <address>?</address>
+            <!--Optional:-->
+            <credit>?</credit>
+         </CustomerData>
+      </upd:UpdateCustomerDataResponse>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:responseContent><con:wsaConfig mustUnderstand="NONE" version="200508" action="UpdateCustomerData"/></con:response><con:dispatchConfig/></con:mockOperation></con:mockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
