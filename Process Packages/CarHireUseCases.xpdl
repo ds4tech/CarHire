@@ -177,6 +177,15 @@
         <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="223,179,0"/>
       </xpdl2:NodeGraphicsInfos>
     </xpdl2:Pool>
+    <xpdl2:Pool Id="_n1es4hv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="Pool" Name="Pool" BoundaryVisible="true" Process="_n1es2hv5EeiHGt6Y3z-E2Q">
+      <xpdl2:Lanes>
+        <xpdl2:Lane Id="_n1es4xv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="Lane" Name="Lane">
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo Height="300.0"/>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Lane>
+      </xpdl2:Lanes>
+    </xpdl2:Pool>
   </xpdl2:Pools>
   <xpdl2:Artifacts>
     <xpdl2:Artifact Id="_banaK_r8Eee95b4_qDuZwA" ArtifactType="Annotation" TextAnnotation="Pomocnicza usługa">
@@ -1583,6 +1592,74 @@ null != Booking.carId || null != Booking.customerId;</xpdl2:Expression></xpdl2:C
             <simulation:ParameterDistribution ParameterId="status"/>
           </simulation:WorkflowProcessSimulationData></xpdl2:ExtendedAttribute>
       </xpdl2:ExtendedAttributes>
+    </xpdl2:WorkflowProcess>
+    <xpdl2:WorkflowProcess Id="_n1es2hv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="UseCase 6: UpgradeCar" Name="UseCase6UpgradeCar">
+      <xpdl2:ProcessHeader/>
+      <xpdl2:FormalParameters>
+        <xpdl2:FormalParameter Id="_n1es4Bv5EeiHGt6Y3z-E2Q" Name="Booking" Mode="INOUT" Required="true" xpdExt:DisplayName="Booking">
+          <xpdl2:DataType>
+            <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_4N7YgP0ZEee-cfu0sOdBwA"/>
+          </xpdl2:DataType>
+        </xpdl2:FormalParameter>
+        <xpdl2:FormalParameter Id="_n1es4Rv5EeiHGt6Y3z-E2Q" Name="CarData" Mode="INOUT" Required="true" xpdExt:DisplayName="CarData">
+          <xpdl2:DataType>
+            <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_-JTHkP0VEee-cfu0sOdBwA"/>
+          </xpdl2:DataType>
+        </xpdl2:FormalParameter>
+      </xpdl2:FormalParameters>
+      <xpdl2:Activities>
+        <xpdl2:Activity Id="_n1es2xv5EeiHGt6Y3z-E2Q" Name="Start" xpdExt:Visibility="Private" xpdExt:DisplayName="Start">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="27.0" LaneId="_n1es4xv5EeiHGt6Y3z-E2Q" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="53.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_n1es3Bv5EeiHGt6Y3z-E2Q" Name="End" xpdExt:Visibility="Private" xpdExt:DisplayName="End">
+          <xpdl2:Event>
+            <xpdl2:EndEvent Result="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="30.0" LaneId="_n1es4xv5EeiHGt6Y3z-E2Q" Width="30.0">
+              <xpdl2:Coordinates XCoordinate="515.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_n1es3Rv5EeiHGt6Y3z-E2Q" Name="Task" xpdExt:Visibility="Private" xpdExt:DisplayName="Task">
+          <xpdl2:Implementation>
+            <xpdl2:No/>
+          </xpdl2:Implementation>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="64.0" LaneId="_n1es4xv5EeiHGt6Y3z-E2Q" Width="96.0">
+              <xpdl2:Coordinates XCoordinate="264.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+      </xpdl2:Activities>
+      <xpdl2:Transitions>
+        <xpdl2:Transition Id="_n1es3hv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="" Name="" From="_n1es3Rv5EeiHGt6Y3z-E2Q" To="_n1es3Bv5EeiHGt6Y3z-E2Q">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_n1es3xv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="" Name="" From="_n1es2xv5EeiHGt6Y3z-E2Q" To="_n1es3Rv5EeiHGt6Y3z-E2Q">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+      </xpdl2:Transitions>
+      <xpdl2:ExtendedAttributes>
+        <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
+        <xpdl2:ExtendedAttribute Name="WorkflowProcessSimulationData"><simulation:WorkflowProcessSimulationData>
+            <simulation:ParameterDistribution ParameterId="Booking"/>
+            <simulation:ParameterDistribution ParameterId="CarData"/>
+          </simulation:WorkflowProcessSimulationData></xpdl2:ExtendedAttribute>
+      </xpdl2:ExtendedAttributes>
+      <xpdl2:Extensions/>
     </xpdl2:WorkflowProcess>
   </xpdl2:WorkflowProcesses>
   <xpdl2:ExtendedAttributes>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<wsdl:definitions xmlns:ns="http://www.mgr.pw.pl/CarHire/UpdateBooking" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:ttns="http://mgr/carhire" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarHire" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateBooking" tibex:XPDL="CarHireServices.xpdl">
+<wsdl:definitions xmlns:ns="http://www.mgr.pw.pl/CarHire/UpdateBooking" xmlns:tibex="http://www.tibco.com/bs3.2/extensions" xmlns:ttns="http://mgr/carhire" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarHire" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateBooking" tibex:ServiceTask="_eHexgP8xEeehz8elB3v-pA" tibex:XPDL="CarHireServices.xpdl" tibex:process="_NNe4sPoGEeeGs-PDHTbgtA">
   <wsdl:types>
     <xsd:schema xmlns="http://www.mgr.pw.pl/CarHire/UpdateBooking" targetNamespace="http://www.mgr.pw.pl/CarHire/UpdateBooking"/>
     <xsd:schema xmlns="http://mgr/carhire" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:tns1="http://mgr/carhire" targetNamespace="http://mgr/carhire">
@@ -45,7 +45,15 @@
               </xsd:restriction>
             </xsd:simpleType>
           </xsd:element>
-          <xsd:element maxOccurs="1" minOccurs="0" name="credit" type="double_StudioGeneratedTemplate"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="credit">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="10"/>
+                <xsd:fractionDigits value="2"/>
+                <xsd:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
         </xsd:sequence>
       </xsd:complexType>
       <xsd:complexType name="CarData">
@@ -57,7 +65,15 @@
               </xsd:restriction>
             </xsd:simpleType>
           </xsd:element>
-          <xsd:element maxOccurs="1" minOccurs="0" name="costPerDay" type="double_StudioGeneratedTemplate"/>
+          <xsd:element maxOccurs="1" minOccurs="0" name="costPerDay">
+            <xsd:simpleType>
+              <xsd:restriction base="xsd:decimal">
+                <xsd:totalDigits value="10"/>
+                <xsd:fractionDigits value="2"/>
+                <xsd:pattern value="[+-]?([1-9][0-9]{0,7}|0)(\.[0-9]{0,2})?"/>
+              </xsd:restriction>
+            </xsd:simpleType>
+          </xsd:element>
           <xsd:element maxOccurs="1" minOccurs="0" name="name">
             <xsd:simpleType>
               <xsd:restriction base="xsd:string">
@@ -112,12 +128,11 @@
           <xsd:element maxOccurs="1" minOccurs="0" name="state" type="bookingState"/>
         </xsd:sequence>
       </xsd:complexType>
-      <xsd:simpleType name="double_StudioGeneratedTemplate">
-        <xsd:restriction base="xsd:double">
-          <xsd:minInclusive value="-179.76931348623157E+306"/>
-          <xsd:maxInclusive value="179.76931348623157E+306"/>
-        </xsd:restriction>
-      </xsd:simpleType>
+      <xsd:complexType name="Cars">
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" minOccurs="0" name="cars" type="CarData"/>
+        </xsd:sequence>
+      </xsd:complexType>
       <xsd:element name="bookingStateElement">
         <xsd:simpleType>
           <xsd:restriction base="bookingState"/>
@@ -126,6 +141,7 @@
       <xsd:element name="CustomerDataElement" type="CustomerData"/>
       <xsd:element name="CarDataElement" type="CarData"/>
       <xsd:element name="BookingElement" type="Booking"/>
+      <xsd:element name="CarsElement" type="Cars"/>
     </xsd:schema>
   </wsdl:types>
   <wsdl:message name="UpdateBooking_UpdateBooking_INPUT">
@@ -134,10 +150,27 @@
   <wsdl:message name="UpdateBooking_UpdateBooking_OUTPUT">
     <wsdl:part name="Booking" type="ttns:Booking"/>
   </wsdl:message>
-  <wsdl:portType name="UpdateBooking">
+  <wsdl:portType name="UpdateBooking" tibex:FlowContainer="_NNe4sPoGEeeGs-PDHTbgtA">
     <wsdl:operation name="UpdateBooking">
-      <wsdl:input message="ns:UpdateBooking_UpdateBooking_INPUT"/>
-      <wsdl:output message="ns:UpdateBooking_UpdateBooking_OUTPUT"/>
+      <wsdl:input message="ns:UpdateBooking_UpdateBooking_INPUT" tibex:Event="_eHexgP8xEeehz8elB3v-pA"/>
+      <wsdl:output message="ns:UpdateBooking_UpdateBooking_OUTPUT" tibex:Event="_eHexgP8xEeehz8elB3v-pA"/>
     </wsdl:operation>
   </wsdl:portType>
+  <wsdl:binding name="UpdateBookingSOAP" type="ns:UpdateBooking">
+    <binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <wsdl:operation name="UpdateBooking">
+      <operation soapAction="http://www.example.org//CarHire/UpdateBooking" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <wsdl:input>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:input>
+      <wsdl:output>
+        <body use="literal" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CarHire">
+    <wsdl:port binding="ns:UpdateBookingSOAP" name="UpdateBooking">
+      <address location="http://www.example.org/" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </wsdl:port>
+  </wsdl:service>
 </wsdl:definitions>

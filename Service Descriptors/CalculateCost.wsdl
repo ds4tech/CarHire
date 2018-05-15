@@ -1,32 +1,51 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<wsdl:definitions xmlns:ns="http://www.mgr.pw.pl/CarHire/CalculateCost" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="CarHire" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost">
-  <wsdl:types>
-    <xsd:schema xmlns="http://www.mgr.pw.pl/CarHire/CalculateCost" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost">
-      <xsd:simpleType name="string_50">
-        <xsd:restriction base="xsd:string">
-          <xsd:maxLength value="50"/>
-        </xsd:restriction>
-      </xsd:simpleType>
-      <xsd:simpleType name="dateTime">
-        <xsd:restriction base="xsd:dateTime"/>
-      </xsd:simpleType>
-      <xsd:simpleType name="decimal__">
-        <xsd:restriction base="xsd:decimal"/>
-      </xsd:simpleType>
-    </xsd:schema>
-  </wsdl:types>
-  <wsdl:message name="CalculateCost_CalculateCost_INPUT">
-    <wsdl:part name="carId" type="ns:string_50"/>
-    <wsdl:part name="dateFrom" type="ns:dateTime"/>
-    <wsdl:part name="dateTo" type="ns:dateTime"/>
-  </wsdl:message>
-  <wsdl:message name="CalculateCost_CalculateCost_OUTPUT">
-    <wsdl:part name="cost" type="ns:decimal__"/>
-  </wsdl:message>
-  <wsdl:portType name="CalculateCost">
-    <wsdl:operation name="CalculateCost">
-      <wsdl:input message="ns:CalculateCost_CalculateCost_INPUT"/>
-      <wsdl:output message="ns:CalculateCost_CalculateCost_OUTPUT"/>
-    </wsdl:operation>
-  </wsdl:portType>
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Created by TIBCO WSDL-->
+<wsdl:definitions xmlns:tns="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns0="http://www.mgr.pw.pl/CarHire/CalculateCost" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="CalculateCost_Provider" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost/CalculateCost_Provider">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.mgr.pw.pl/CarHire/CalculateCost" elementFormDefault="qualified" attributeFormDefault="unqualified">
+            <xs:simpleType name="dateTime">
+                <xs:restriction base="xs:dateTime"/>
+            </xs:simpleType>
+            <xs:simpleType name="decimal__">
+                <xs:restriction base="xs:decimal"/>
+            </xs:simpleType>
+            <xs:simpleType name="string_50">
+                <xs:restriction base="xs:string">
+                    <xs:maxLength value="50"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="CalculateCost_CalculateCost_INPUT">
+        <wsdl:part name="carId" type="ns0:string_50"/>
+        <wsdl:part name="dateFrom" type="ns0:dateTime"/>
+        <wsdl:part name="dateTo" type="ns0:dateTime"/>
+    </wsdl:message>
+    <wsdl:message name="CalculateCost_CalculateCost_OUTPUT">
+        <wsdl:part name="cost" type="ns0:decimal__"/>
+    </wsdl:message>
+    <wsdl:portType xmlns:ns1="http://www.tibco.com/bs3.2/extensions" name="CalculateCost" ns1:FlowContainer="_50KkoPr3Eee95b4_qDuZwA">
+        <wsdl:operation name="CalculateCost">
+            <wsdl:input message="tns:CalculateCost_CalculateCost_INPUT" ns1:Event="_Sn13sP8sEeehz8elB3v-pA"/>
+            <wsdl:output message="tns:CalculateCost_CalculateCost_OUTPUT" ns1:Event="_Sn13sP8sEeehz8elB3v-pA"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="CalculateCost_EP" type="tns:CalculateCost">
+        <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="CalculateCost">
+            <wsdl:documentation/>
+            <soap:operation style="rpc" soapAction="CalculateCost"/>
+            <wsdl:input>
+                <soap:body use="literal" parts="carId dateFrom dateTo"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal" parts="cost"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="CalculateCost_Provider">
+        <wsdl:port name="CalculateCost_EP" binding="tns:CalculateCost_EP">
+            <soap:address location="http://0.0.0.0:8080/CalculateCost/CalculateCost"/>
+        </wsdl:port>
+    </wsdl:service>
 </wsdl:definitions>

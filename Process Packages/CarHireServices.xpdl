@@ -13,16 +13,6 @@
     <xpdl2:Version>1.0.0.qualifier</xpdl2:Version>
   </xpdl2:RedefinableHeader>
   <xpdl2:Participants>
-    <xpdl2:Participant Id="_17ADUP8sEeehz8elB3v-pA" xpdExt:DisplayName="CalculateCost_Consumer" Name="CalculateCost_Consumer">
-      <xpdl2:ParticipantType Type="SYSTEM"/>
-      <xpdExt:ParticipantSharedResource>
-        <xpdExt:WebService>
-          <xpdExt:Outbound>
-            <xpdExt:VirtualBinding Name="Virtualization"/>
-          </xpdExt:Outbound>
-        </xpdExt:WebService>
-      </xpdExt:ParticipantSharedResource>
-    </xpdl2:Participant>
     <xpdl2:Participant Id="_8XsIAP8uEeehz8elB3v-pA" xpdExt:DisplayName="CalculateCost_Provider" Name="CalculateCost_Provider">
       <xpdl2:ParticipantType Type="SYSTEM"/>
       <xpdExt:ParticipantSharedResource>
@@ -31,36 +21,6 @@
             <xpdExt:VirtualBinding Name="Virtualization"/>
             <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/CalculateCost/CalculateCost" HttpConnectorInstanceName="httpConnector"/>
           </xpdExt:Inbound>
-        </xpdExt:WebService>
-      </xpdExt:ParticipantSharedResource>
-    </xpdl2:Participant>
-    <xpdl2:Participant Id="_j19MtP8wEeehz8elB3v-pA" xpdExt:DisplayName="GetCarData_Consumer" Name="GetCarData_Consumer">
-      <xpdl2:ParticipantType Type="SYSTEM"/>
-      <xpdExt:ParticipantSharedResource>
-        <xpdExt:WebService>
-          <xpdExt:Outbound>
-            <xpdExt:VirtualBinding Name="Virtualization"/>
-          </xpdExt:Outbound>
-        </xpdExt:WebService>
-      </xpdExt:ParticipantSharedResource>
-    </xpdl2:Participant>
-    <xpdl2:Participant Id="_MEK9FP8xEeehz8elB3v-pA" xpdExt:DisplayName="GetCustomerData_Consumer" Name="GetCustomerData_Consumer">
-      <xpdl2:ParticipantType Type="SYSTEM"/>
-      <xpdExt:ParticipantSharedResource>
-        <xpdExt:WebService>
-          <xpdExt:Outbound>
-            <xpdExt:VirtualBinding Name="Virtualization"/>
-          </xpdExt:Outbound>
-        </xpdExt:WebService>
-      </xpdExt:ParticipantSharedResource>
-    </xpdl2:Participant>
-    <xpdl2:Participant Id="_PLWMwP9aEeehz8elB3v-pA" xpdExt:DisplayName="UpdateBooking_Consumer" Name="UpdateBooking_Consumer">
-      <xpdl2:ParticipantType Type="SYSTEM"/>
-      <xpdExt:ParticipantSharedResource>
-        <xpdExt:WebService>
-          <xpdExt:Outbound>
-            <xpdExt:VirtualBinding Name="Virtualization"/>
-          </xpdExt:Outbound>
         </xpdExt:WebService>
       </xpdExt:ParticipantSharedResource>
     </xpdl2:Participant>
@@ -110,6 +70,144 @@
         <xpdExt:WebService>
           <xpdExt:Outbound>
             <xpdExt:VirtualBinding Name="Virtualization"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_biThkFduEei6MaAN2jcp_g" xpdExt:DisplayName="ChargeCustomer_Provider" Name="ChargeCustomer_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/ChargeCustomer/ChargeCustomer" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_t99kkFduEei6MaAN2jcp_g" xpdExt:DisplayName="GetBookingData_Provider" Name="GetBookingData_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/GetBookingData/GetBookingData" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_RJp2QFdvEei6MaAN2jcp_g" xpdExt:DisplayName="GetCustomerData_Provider" Name="GetCustomerData_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/GetCustomerData/GetCustomerData" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_Kk_kgFdxEeimp4T1K2-dFg" xpdExt:DisplayName="SearchCars_Provider" Name="SearchCars_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/SearchCars/SearchCars" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_a4NUUFdxEeimp4T1K2-dFg" xpdExt:DisplayName="UpdateCarData_Provider" Name="UpdateCarData_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/UpdateCarData/UpdateCarData" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_iJoTgFdxEeimp4T1K2-dFg" xpdExt:DisplayName="UpdateCustomerData_Provider" Name="UpdateCustomerData_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/UpdateCustomerData/UpdateCustomerData" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_BjU6QFdyEeimp4T1K2-dFg" xpdExt:DisplayName="GetCarData_Provider" Name="GetCarData_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/GetCarData/GetCarData" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_uBljgFdyEeimp4T1K2-dFg" xpdExt:DisplayName="UpdateBooking_Provider" Name="UpdateBooking_Provider">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Inbound>
+            <xpdExt:VirtualBinding Name="Virtualization"/>
+            <xpdExt:SoapHttpBinding Name="SoapOverHttp" BindingStyle="RpcLiteral" SoapVersion="1.1" EndpointUrlPath="/UpdateBooking/UpdateBooking" HttpConnectorInstanceName="httpConnector"/>
+          </xpdExt:Inbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_Q429AFd2Eeimp4T1K2-dFg" xpdExt:DisplayName="UpdateBooking_Consumer" Name="UpdateBooking_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:SoapHttpBinding HttpClientInstanceName="UpdateBooking_Consumer2"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_ZhHMQFd2Eeimp4T1K2-dFg" xpdExt:DisplayName="GetCarData_Consumer" Name="GetCarData_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:SoapHttpBinding HttpClientInstanceName="GetCarData_Consumer2"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_fm--UFd2Eeimp4T1K2-dFg" xpdExt:DisplayName="GetCustomerData_Consumer" Name="GetCustomerData_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:SoapHttpBinding HttpClientInstanceName="GetCustomerData_Consumer2"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_sGBR4Fd2Eeimp4T1K2-dFg" xpdExt:DisplayName="CalculateCost_Consumer" Name="CalculateCost_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:SoapHttpBinding HttpClientInstanceName="CalculateCost_Consumer"/>
+          </xpdExt:Outbound>
+        </xpdExt:WebService>
+      </xpdExt:ParticipantSharedResource>
+    </xpdl2:Participant>
+    <xpdl2:Participant Id="_t9MukFd5Eeimp4T1K2-dFg" xpdExt:DisplayName="CalculateCost_EP_Consumer" Name="CalculateCost_EP_Consumer">
+      <xpdl2:ParticipantType Type="SYSTEM"/>
+      <xpdExt:ParticipantSharedResource>
+        <xpdExt:WebService>
+          <xpdExt:Outbound>
+            <xpdExt:SoapHttpBinding HttpClientInstanceName="CalculateCost_EP_Consumer"/>
           </xpdExt:Outbound>
         </xpdExt:WebService>
       </xpdExt:ParticipantSharedResource>
@@ -224,9 +322,18 @@
         <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="223,179,0"/>
       </xpdl2:NodeGraphicsInfos>
     </xpdl2:Pool>
+    <xpdl2:Pool Id="_aLozABv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="Pool" Name="Pool" BoundaryVisible="true" Process="_aLfCABv5EeiHGt6Y3z-E2Q">
+      <xpdl2:Lanes>
+        <xpdl2:Lane Id="_aLozARv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="Lane" Name="Lane">
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo Height="300.0"/>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Lane>
+      </xpdl2:Lanes>
+    </xpdl2:Pool>
   </xpdl2:Pools>
   <xpdl2:WorkflowProcesses>
-    <xpdl2:WorkflowProcess Id="_nMgLAPn8EeeGs-PDHTbgtA" xpdExt:DisplayName="SearchCars" xpdExt:XpdModelType="ServiceProcess" Name="SearchCars">
+    <xpdl2:WorkflowProcess Id="_nMgLAPn8EeeGs-PDHTbgtA" xpdExt:DisplayName="SearchCars" xpdExt:XpdModelType="ServiceProcess" xpdExt:ApiEndPointParticipant="_Kk_kgFdxEeimp4T1K2-dFg" Name="SearchCars">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_sJ6gMPn8EeeGs-PDHTbgtA" Name="carData" Mode="IN" Required="true" xpdExt:DisplayName="carData">
@@ -251,15 +358,39 @@
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_nOHUk_n8EeeGs-PDHTbgtA" Name="EndEvent" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_nOHUk_n8EeeGs-PDHTbgtA" Name="ReplyToSearchCarsService" xpdExt:DisplayName="Reply To: Search Cars Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_IMtegFdxEeimp4T1K2-dFg" CatchThrow="THROW">
+                <xpdl2:Message Id="_MJ4esVdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="cars">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">cars</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_Kk_kgFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="SearchCars.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="SearchCars" OperationName="SearchCars">
+                  <xpdExt:ExternalReference location="SearchCars.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_nOHUkfn8EeeGs-PDHTbgtA" Width="54.0">
               <xpdl2:Coordinates XCoordinate="493.0" YCoordinate="118.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_nvrJgPn8EeeGs-PDHTbgtA" Name="SearchCars" IsATransaction="false" xpdExt:Visibility="Private" xpdExt:DisplayName="Search Cars" xpdExt:RequireNewTransaction="false">
           <xpdl2:Implementation>
@@ -295,9 +426,51 @@
           <xpdl2:Performers>
             <xpdl2:Performer>_jfujxP-NEeehz8elB3v-pA</xpdl2:Performer>
           </xpdl2:Performers>
+          <xpdl2:TransitionRestrictions>
+            <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
+            </xpdl2:TransitionRestriction>
+          </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_nOHUkfn8EeeGs-PDHTbgtA" Width="96.0">
               <xpdl2:Coordinates XCoordinate="268.0" YCoordinate="118.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_IMtegFdxEeimp4T1K2-dFg" Name="SearchCarsService" xpdExt:Visibility="Private" xpdExt:DisplayName="Search Cars Service">
+          <xpdl2:Event>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_JqFbcFdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="carData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">carData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_Kk_kgFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="SearchCars.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="SearchCars" OperationName="SearchCars">
+                  <xpdExt:ExternalReference location="SearchCars.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
+          </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_Kk_kgFdxEeimp4T1K2-dFg</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="27.0" LaneId="_nOHUkfn8EeeGs-PDHTbgtA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="62.0" YCoordinate="194.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -318,6 +491,15 @@
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
+        <xpdl2:Transition Id="_IhWRwFdxEeimp4T1K2-dFg" xpdExt:DisplayName="" Name="" From="_IMtegFdxEeimp4T1K2-dFg" To="_nvrJgPn8EeeGs-PDHTbgtA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
       </xpdl2:Transitions>
       <xpdl2:ExtendedAttributes>
         <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
@@ -329,7 +511,7 @@
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true" xpdExt:DeployToPageflowRuntime="false"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_NNe4sPoGEeeGs-PDHTbgtA" xpdExt:DisplayName="UpdateBooking" xpdExt:XpdModelType="ServiceProcess" Name="UpdateBooking">
+    <xpdl2:WorkflowProcess Id="_NNe4sPoGEeeGs-PDHTbgtA" xpdExt:DisplayName="UpdateBooking" xpdExt:XpdModelType="ServiceProcess" xpdExt:ApiEndPointParticipant="_uBljgFdyEeimp4T1K2-dFg" Name="UpdateBooking">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_k2NdgPoGEeeGs-PDHTbgtA" Name="Booking" Mode="INOUT" Required="false" xpdExt:DisplayName="Booking">
@@ -349,9 +531,29 @@
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_NNzBwvoGEeeGs-PDHTbgtA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_NNzBwvoGEeeGs-PDHTbgtA" Name="ReplyToUpdateBookingService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: Update Booking Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_PafT0FdxEeimp4T1K2-dFg" CatchThrow="THROW">
+                <xpdl2:Message Id="_uBvUgFdyEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="Booking">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_uBljgFdyEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateBooking.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateBooking" OperationName="UpdateBooking">
+                  <xpdExt:ExternalReference location="UpdateBooking.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -363,11 +565,16 @@
               <xpdl2:Coordinates XCoordinate="642.0" YCoordinate="78.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_czlRkPoLEeeGs-PDHTbgtA" Name="" xpdExt:DisplayName="">
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_n169ofoLEeeGs-PDHTbgtA"/>
@@ -378,7 +585,7 @@
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="45.0" LaneId="_NNe4svoGEeeGs-PDHTbgtA" Width="43.0">
-              <xpdl2:Coordinates XCoordinate="326.0" YCoordinate="78.0"/>
+              <xpdl2:Coordinates XCoordinate="327.0" YCoordinate="151.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -388,7 +595,7 @@
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="68.0" LaneId="_NNe4svoGEeeGs-PDHTbgtA" Width="108.0">
-              <xpdl2:Coordinates XCoordinate="471.0" YCoordinate="172.0"/>
+              <xpdl2:Coordinates XCoordinate="475.0" YCoordinate="151.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -406,22 +613,22 @@
           <xpdl2:Implementation>
             <xpdl2:Task>
               <xpdl2:TaskService xpdExt:ImplementationType="WebService" Implementation="WebService">
-                <xpdl2:MessageIn Id="_PLU-ov9aEeehz8elB3v-pA">
+                <xpdl2:MessageIn Id="_Q4yEgld2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="Booking">
                       <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageIn>
-                <xpdl2:MessageOut Id="_PLU-o_9aEeehz8elB3v-pA">
+                <xpdl2:MessageOut Id="_Q4yEg1d2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="Booking">
                       <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageOut>
-                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_PLWMwP9aEeehz8elB3v-pA" OperationName="">
-                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://schemas.xmlsoap.org/soap/http" xpdExt:Alias="_Q429AFd2Eeimp4T1K2-dFg" OperationName="UpdateBooking">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="UpdateBooking" ServiceName="CarHire">
                     <xpdl2:EndPoint EndPointType="WSDL">
                       <xpdl2:ExternalReference location="UpdateBooking.wsdl"/>
                     </xpdl2:EndPoint>
@@ -434,11 +641,48 @@
             </xpdl2:Task>
           </xpdl2:Implementation>
           <xpdl2:Performers>
-            <xpdl2:Performer>_PLWMwP9aEeehz8elB3v-pA</xpdl2:Performer>
+            <xpdl2:Performer>_Q429AFd2Eeimp4T1K2-dFg</xpdl2:Performer>
           </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_NNe4svoGEeeGs-PDHTbgtA" Width="96.0">
               <xpdl2:Coordinates XCoordinate="208.0" YCoordinate="78.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_PafT0FdxEeimp4T1K2-dFg" Name="UpdateBookingService" xpdExt:Visibility="Private" xpdExt:DisplayName="Update Booking Service">
+          <xpdl2:Event>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_QZmAYFdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="Booking">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_uBljgFdyEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateBooking.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateBooking" OperationName="UpdateBooking">
+                  <xpdExt:ExternalReference location="UpdateBooking.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
+          </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_uBljgFdyEeimp4T1K2-dFg</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="27.0" LaneId="_NNe4svoGEeeGs-PDHTbgtA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="87.0" YCoordinate="151.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -458,9 +702,7 @@
           <xpdl2:Condition Type="OTHERWISE"/>
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
-            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition">
-              <xpdl2:Coordinates XCoordinate="51.21914962273543" YCoordinate="0.0"/>
-            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_wn8z8PoLEeeGs-PDHTbgtA" xpdExt:DisplayName="" Name="" From="_n169oPoLEeeGs-PDHTbgtA" To="_NNzBwvoGEeeGs-PDHTbgtA">
@@ -492,6 +734,16 @@
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
+        <xpdl2:Transition Id="_R38NsFdxEeimp4T1K2-dFg" xpdExt:DisplayName="" Name="" From="_PafT0FdxEeimp4T1K2-dFg" To="_czlRkPoLEeeGs-PDHTbgtA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
       </xpdl2:Transitions>
       <xpdl2:ExtendedAttributes>
         <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
@@ -500,38 +752,38 @@
           </simulation:WorkflowProcessSimulationData></xpdl2:ExtendedAttribute>
       </xpdl2:ExtendedAttributes>
       <xpdl2:Extensions/>
-      <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true" xpdExt:DeployToPageflowRuntime="true"/>
+      <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true" xpdExt:DeployToPageflowRuntime="false"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_r3aPYPoGEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetCarData" Name="GetCarData">
+    <xpdl2:WorkflowProcess Id="_r3aPYPoGEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetCarData" xpdExt:ApiEndPointParticipant="_BjU6QFdyEeimp4T1K2-dFg" Name="GetCarData">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
-        <xpdl2:FormalParameter Id="_2OUY0PoGEeeGs-PDHTbgtA" Name="CarData" Mode="INOUT" Required="false" xpdExt:DisplayName="CarData">
+        <xpdl2:FormalParameter Id="_2OUY0PoGEeeGs-PDHTbgtA" Name="CarData" Mode="INOUT" Required="true" xpdExt:DisplayName="CarData">
           <xpdl2:DataType>
             <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_-JTHkP0VEee-cfu0sOdBwA"/>
           </xpdl2:DataType>
         </xpdl2:FormalParameter>
       </xpdl2:FormalParameters>
       <xpdl2:Activities>
-        <xpdl2:Activity Id="_vte-kfRfEeeCheHsxjQ5WQ" Name="GetCarData" IsATransaction="false" xpdExt:Visibility="Private" xpdExt:DisplayName="GetCarData" xpdExt:RequireNewTransaction="false">
+        <xpdl2:Activity Id="_vte-kfRfEeeCheHsxjQ5WQ" Name="GetCarData" IsATransaction="false" xpdExt:Visibility="Private" xpdExt:RequireNewTransaction="false" xpdExt:DisplayName="GetCarData">
           <xpdl2:Implementation>
             <xpdl2:Task>
               <xpdl2:TaskService xpdExt:ImplementationType="WebService" Implementation="WebService">
-                <xpdl2:MessageIn Id="_j19Msv8wEeehz8elB3v-pA">
+                <xpdl2:MessageIn Id="_ZhF-Ild2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CarData">
                       <xpdl2:Actual ScriptGrammar="JavaScript">CarData</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageIn>
-                <xpdl2:MessageOut Id="_j19Ms_8wEeehz8elB3v-pA">
+                <xpdl2:MessageOut Id="_ZhF-I1d2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="CarData">
                       <xpdl2:Actual ScriptGrammar="JavaScript">CarData</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageOut>
-                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_j19MtP8wEeehz8elB3v-pA" OperationName="">
-                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://schemas.xmlsoap.org/soap/http" xpdExt:Alias="_ZhHMQFd2Eeimp4T1K2-dFg" OperationName="GetCarData">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="GetCarData" ServiceName="CarHire">
                     <xpdl2:EndPoint EndPointType="WSDL">
                       <xpdl2:ExternalReference location="GetCarData.wsdl"/>
                     </xpdl2:EndPoint>
@@ -544,11 +796,11 @@
             </xpdl2:Task>
           </xpdl2:Implementation>
           <xpdl2:Performers>
-            <xpdl2:Performer>_j19MtP8wEeehz8elB3v-pA</xpdl2:Performer>
+            <xpdl2:Performer>_ZhHMQFd2Eeimp4T1K2-dFg</xpdl2:Performer>
           </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_r3aPYvoGEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="215.0" YCoordinate="121.0"/>
+              <xpdl2:Coordinates XCoordinate="224.0" YCoordinate="60.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -556,19 +808,60 @@
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_r3a2cPoGEeeGs-PDHTbgtA" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+        <xpdl2:Activity Id="_r3a2cPoGEeeGs-PDHTbgtA" Name="GetCarDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="GetCarData Service">
           <xpdl2:Event>
-            <xpdl2:StartEvent Trigger="None"/>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_4uKXwFduEei6MaAN2jcp_g"/>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_BjU6QFdyEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetCarData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetCarData" OperationName="GetCarData">
+                  <xpdExt:ExternalReference location="GetCarData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
           </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_BjU6QFdyEeimp4T1K2-dFg</xpdl2:Performer>
+          </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_r3aPYvoGEeeGs-PDHTbgtA" Width="58.0">
               <xpdl2:Coordinates XCoordinate="117.0" YCoordinate="121.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_r3bdgPoGEeeGs-PDHTbgtA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_r3bdgPoGEeeGs-PDHTbgtA" Name="ReplyToGetCarDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: GetCarData Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_r3a2cPoGEeeGs-PDHTbgtA" CatchThrow="THROW">
+                <xpdl2:Message Id="_-K00wFduEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CarData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CarData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_BjU6QFdyEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetCarData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetCarData" OperationName="GetCarData">
+                  <xpdExt:ExternalReference location="GetCarData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -580,6 +873,10 @@
               <xpdl2:Coordinates XCoordinate="634.0" YCoordinate="121.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_DL5ekP9iEeehz8elB3v-pA" Name="GetDatawherenameequal" xpdExt:Visibility="Private" xpdExt:DisplayName="Get Data where name equal">
           <xpdl2:Implementation>
@@ -595,6 +892,7 @@
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_DL5ek_9iEeehz8elB3v-pA"/>
@@ -619,11 +917,22 @@
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
+        <xpdl2:Activity Id="_Aog_MFdvEei6MaAN2jcp_g" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_r3aPYvoGEeeGs-PDHTbgtA" Width="58.0">
+              <xpdl2:Coordinates XCoordinate="117.0" YCoordinate="60.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
-        <xpdl2:Transition Id="_r3a2cfoGEeeGs-PDHTbgtA" Name="" From="_r3a2cPoGEeeGs-PDHTbgtA" To="_vte-kfRfEeeCheHsxjQ5WQ">
+        <xpdl2:Transition Id="_r3a2cfoGEeeGs-PDHTbgtA" Name="" From="_r3a2cPoGEeeGs-PDHTbgtA" To="_DL5ekf9iEeehz8elB3v-pA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_r3bdgfoGEeeGs-PDHTbgtA" Name="" From="_vte-kfRfEeeCheHsxjQ5WQ" To="_DL5ekf9iEeehz8elB3v-pA">
@@ -663,6 +972,15 @@
             </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
+        <xpdl2:Transition Id="_Bot38FdvEei6MaAN2jcp_g" xpdExt:DisplayName="" Name="" From="_Aog_MFdvEei6MaAN2jcp_g" To="_vte-kfRfEeeCheHsxjQ5WQ">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
       </xpdl2:Transitions>
       <xpdl2:ExtendedAttributes>
         <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
@@ -673,7 +991,7 @@
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_dNEscPoHEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetBookingData" Name="GetBookingData">
+    <xpdl2:WorkflowProcess Id="_dNEscPoHEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetBookingData" xpdExt:ApiEndPointParticipant="_t99kkFduEei6MaAN2jcp_g" Name="GetBookingData">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_uGMPUf0gEee-cfu0sOdBwA" Name="Booking" Mode="INOUT" Required="true" xpdExt:DisplayName="Booking">
@@ -719,7 +1037,7 @@
           </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_dNEscvoHEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="217.0" YCoordinate="116.0"/>
+              <xpdl2:Coordinates XCoordinate="207.0" YCoordinate="45.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -730,15 +1048,42 @@
             <xpdExt:AssociatedParameter FormalParam="Booking" Mode="INOUT" Mandatory="true"/>
           </xpdExt:AssociatedParameters>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_dNFTgPoHEeeGs-PDHTbgtA" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+        <xpdl2:Activity Id="_dNFTgPoHEeeGs-PDHTbgtA" Name="GetBookingDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="GetBookingData Service">
           <xpdl2:Event>
-            <xpdl2:StartEvent Trigger="None"/>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_tNV_8FduEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="Booking">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_t99kkFduEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetBookingData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetBookingData" OperationName="GetBookingData">
+                  <xpdExt:ExternalReference location="GetBookingData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
           </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_t99kkFduEei6MaAN2jcp_g</xpdl2:Performer>
+          </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_dNEscvoHEeeGs-PDHTbgtA" Width="58.0">
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="62.0" LaneId="_dNEscvoHEeeGs-PDHTbgtA" Width="88.0">
               <xpdl2:Coordinates XCoordinate="89.0" YCoordinate="116.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_N2tbef9iEeehz8elB3v-pA" Name="GetDatawherecarId" xpdExt:Visibility="Private" xpdExt:DisplayName="Get Data where carId">
           <xpdl2:Implementation>
@@ -750,9 +1095,29 @@
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_N2tbev9iEeehz8elB3v-pA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_N2tbev9iEeehz8elB3v-pA" Name="ReplyToGetBookingDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: GetBookingData Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_dNFTgPoHEeeGs-PDHTbgtA" CatchThrow="THROW">
+                <xpdl2:Message Id="_HxBS8VdvEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="Booking">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">Booking</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_t99kkFduEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetBookingData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetBookingData" OperationName="GetBookingData">
+                  <xpdExt:ExternalReference location="GetBookingData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -764,11 +1129,16 @@
               <xpdl2:Coordinates XCoordinate="710.0" YCoordinate="116.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_N2tbe_9iEeehz8elB3v-pA">
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_N2tbff9iEeehz8elB3v-pA"/>
@@ -815,11 +1185,22 @@
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
+        <xpdl2:Activity Id="_EHC7kFdvEei6MaAN2jcp_g" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="27.0" LaneId="_dNEscvoHEeeGs-PDHTbgtA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="89.0" YCoordinate="45.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
-        <xpdl2:Transition Id="_dNFTgfoHEeeGs-PDHTbgtA" Name="" From="_dNFTgPoHEeeGs-PDHTbgtA" To="_ex5VQfRhEeeCheHsxjQ5WQ">
+        <xpdl2:Transition Id="_dNFTgfoHEeeGs-PDHTbgtA" Name="" From="_dNFTgPoHEeeGs-PDHTbgtA" To="_N2tbe_9iEeehz8elB3v-pA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_dNF6kfoHEeeGs-PDHTbgtA" Name="" From="_ex5VQfRhEeeCheHsxjQ5WQ" To="_N2tbe_9iEeehz8elB3v-pA">
@@ -896,6 +1277,15 @@
             </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
+        <xpdl2:Transition Id="_EaVrAFdvEei6MaAN2jcp_g" xpdExt:DisplayName="" Name="" From="_EHC7kFdvEei6MaAN2jcp_g" To="_ex5VQfRhEeeCheHsxjQ5WQ">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
       </xpdl2:Transitions>
       <xpdl2:ExtendedAttributes>
         <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
@@ -904,9 +1294,9 @@
           </simulation:WorkflowProcessSimulationData></xpdl2:ExtendedAttribute>
       </xpdl2:ExtendedAttributes>
       <xpdl2:Extensions/>
-      <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true" xpdExt:DeployToPageflowRuntime="true"/>
+      <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true" xpdExt:DeployToPageflowRuntime="false"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_BBFiYPoIEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetCustomerData" Name="GetCustomerData">
+    <xpdl2:WorkflowProcess Id="_BBFiYPoIEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="GetCustomerData" xpdExt:ApiEndPointParticipant="_RJp2QFdvEei6MaAN2jcp_g" Name="GetCustomerData">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_D5UTwPoIEeeGs-PDHTbgtA" Name="CustomerData" Mode="INOUT" Required="false" xpdExt:DisplayName="CustomerData">
@@ -922,23 +1312,64 @@
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="364.0" YCoordinate="119.0"/>
+              <xpdl2:Coordinates XCoordinate="422.0" YCoordinate="127.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_BBGJcPoIEeeGs-PDHTbgtA" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+        <xpdl2:Activity Id="_BBGJcPoIEeeGs-PDHTbgtA" Name="GetCustomerDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Get CustomerData Service">
           <xpdl2:Event>
-            <xpdl2:StartEvent Trigger="None"/>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_NLU_gFdvEei6MaAN2jcp_g"/>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_RJp2QFdvEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetCustomerData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetCustomerData" OperationName="GetCustomerData">
+                  <xpdExt:ExternalReference location="GetCustomerData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
           </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_RJp2QFdvEei6MaAN2jcp_g</xpdl2:Performer>
+          </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="58.0">
-              <xpdl2:Coordinates XCoordinate="46.0" YCoordinate="119.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="62.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="78.0">
+              <xpdl2:Coordinates XCoordinate="104.0" YCoordinate="127.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_BBGwgfoIEeeGs-PDHTbgtA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_BBGwgfoIEeeGs-PDHTbgtA" Name="ReplyToGetCustomerDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: Get CustomerData Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_BBGJcPoIEeeGs-PDHTbgtA" CatchThrow="THROW">
+                <xpdl2:Message Id="_SCp60FdvEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CustomerData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CustomerData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_RJp2QFdvEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="GetCustomerData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="GetCustomerData" OperationName="GetCustomerData">
+                  <xpdExt:ExternalReference location="GetCustomerData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -946,15 +1377,20 @@
             </xpdl2:TransitionRestriction>
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="54.0">
-              <xpdl2:Coordinates XCoordinate="510.0" YCoordinate="119.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="62.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="78.0">
+              <xpdl2:Coordinates XCoordinate="568.0" YCoordinate="127.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_gf0kcP0ZEee-cfu0sOdBwA">
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_BBGwgPoIEeeGs-PDHTbgtA"/>
@@ -964,8 +1400,8 @@
             </xpdl2:TransitionRestriction>
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="43.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="41.0">
-              <xpdl2:Coordinates XCoordinate="235.0" YCoordinate="119.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="45.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="43.0">
+              <xpdl2:Coordinates XCoordinate="293.0" YCoordinate="127.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -975,30 +1411,30 @@
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="364.0" YCoordinate="231.0"/>
+              <xpdl2:Coordinates XCoordinate="422.0" YCoordinate="239.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="__ah8AP8wEeehz8elB3v-pA" Name="GetCustomerData" IsATransaction="false" xpdExt:Visibility="Private" xpdExt:DisplayName="Get CustomerData" xpdExt:RequireNewTransaction="false">
+        <xpdl2:Activity Id="__ah8AP8wEeehz8elB3v-pA" Name="GetCustomerData" IsATransaction="false" xpdExt:Visibility="Private" xpdExt:RequireNewTransaction="false" xpdExt:DisplayName="Get CustomerData">
           <xpdl2:Implementation>
             <xpdl2:Task>
               <xpdl2:TaskService xpdExt:ImplementationType="WebService" Implementation="WebService">
-                <xpdl2:MessageIn Id="_MEK9Ev8xEeehz8elB3v-pA">
+                <xpdl2:MessageIn Id="_fm9wMld2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CustomerData">
                       <xpdl2:Actual ScriptGrammar="JavaScript">CustomerData</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageIn>
-                <xpdl2:MessageOut Id="_MEK9E_8xEeehz8elB3v-pA">
+                <xpdl2:MessageOut Id="_fm9wM1d2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="CustomerData">
                       <xpdl2:Actual ScriptGrammar="JavaScript">CustomerData</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageOut>
-                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_MEK9FP8xEeehz8elB3v-pA" OperationName="">
-                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://schemas.xmlsoap.org/soap/http" xpdExt:Alias="_fm--UFd2Eeimp4T1K2-dFg" OperationName="GetCustomerData">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="GetCustomerData" ServiceName="CarHire">
                     <xpdl2:EndPoint EndPointType="WSDL">
                       <xpdl2:ExternalReference location="GetCustomerData.wsdl"/>
                     </xpdl2:EndPoint>
@@ -1011,11 +1447,11 @@
             </xpdl2:Task>
           </xpdl2:Implementation>
           <xpdl2:Performers>
-            <xpdl2:Performer>_MEK9FP8xEeehz8elB3v-pA</xpdl2:Performer>
+            <xpdl2:Performer>_fm--UFd2Eeimp4T1K2-dFg</xpdl2:Performer>
           </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="135.0" YCoordinate="119.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="96.0">
+              <xpdl2:Coordinates XCoordinate="202.0" YCoordinate="53.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -1025,6 +1461,16 @@
           <xpdExt:ActivityResourcePatterns>
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_MUqdQFdvEei6MaAN2jcp_g" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_BBFiYvoIEeeGs-PDHTbgtA" Width="58.0">
+              <xpdl2:Coordinates XCoordinate="104.0" YCoordinate="53.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
@@ -1062,9 +1508,19 @@
             </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
-        <xpdl2:Transition Id="__ah8Af8wEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_BBGJcPoIEeeGs-PDHTbgtA" To="__ah8AP8wEeehz8elB3v-pA">
+        <xpdl2:Transition Id="__ah8Af8wEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_BBGJcPoIEeeGs-PDHTbgtA" To="_gf0kcP0ZEee-cfu0sOdBwA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_MqXAcFdvEei6MaAN2jcp_g" xpdExt:DisplayName="" Name="" From="_MUqdQFdvEei6MaAN2jcp_g" To="__ah8AP8wEeehz8elB3v-pA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
       </xpdl2:Transitions>
@@ -1077,7 +1533,7 @@
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_dUGFAPoIEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="ChargeCustomer" Name="ChargeCustomer">
+    <xpdl2:WorkflowProcess Id="_dUGFAPoIEeeGs-PDHTbgtA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="ChargeCustomer" xpdExt:ApiEndPointParticipant="_biThkFduEei6MaAN2jcp_g" Name="ChargeCustomer">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_q6dNAPoIEeeGs-PDHTbgtA" Name="customerId" Mode="IN" Required="true" xpdExt:DisplayName="customerId">
@@ -1121,25 +1577,75 @@
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="757.0" YCoordinate="95.0"/>
+              <xpdl2:Coordinates XCoordinate="758.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
           <xpdExt:Audit/>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_dUGsEPoIEeeGs-PDHTbgtA" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+        <xpdl2:Activity Id="_dUGsEPoIEeeGs-PDHTbgtA" Name="ChargeCustomerService" xpdExt:Visibility="Private" xpdExt:DisplayName="Charge Customer Service">
           <xpdl2:Event>
-            <xpdl2:StartEvent Trigger="None"/>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_aavckFduEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="amount">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">amount</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="customerId">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">customerId</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_biThkFduEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="ChargeCustomer.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="ChargeCustomer" OperationName="ChargeCustomer">
+                  <xpdExt:ExternalReference location="ChargeCustomer.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
           </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_biThkFduEei6MaAN2jcp_g</xpdl2:Performer>
+          </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="58.0">
-              <xpdl2:Coordinates XCoordinate="111.0" YCoordinate="95.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="77.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="54.0">
+              <xpdl2:Coordinates XCoordinate="100.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_dUGsEvoIEeeGs-PDHTbgtA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_dUGsEvoIEeeGs-PDHTbgtA" Name="ReplyToChargeCustomerService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: Charge Customer Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_dUGsEPoIEeeGs-PDHTbgtA" CatchThrow="THROW">
+                <xpdl2:Message Id="_e39OwVduEei6MaAN2jcp_g">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="true" Direction="IN" Formal="status">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">status</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_biThkFduEei6MaAN2jcp_g" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="ChargeCustomer.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="ChargeCustomer" OperationName="ChargeCustomer">
+                  <xpdExt:ExternalReference location="ChargeCustomer.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -1147,10 +1653,14 @@
             </xpdl2:TransitionRestriction>
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
-            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="54.0">
-              <xpdl2:Coordinates XCoordinate="915.0" YCoordinate="95.0"/>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="92.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="54.0">
+              <xpdl2:Coordinates XCoordinate="916.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_5_TsQPoIEeeGs-PDHTbgtA" Name="GetCustomerData" FinishMode="Automatic" StartMode="Automatic" xpdExt:Visibility="Private" xpdExt:DisplayName="Get CustomerData">
           <xpdl2:Implementation>
@@ -1165,9 +1675,14 @@
               </xpdl2:DataMappings>
             </xpdl2:SubFlow>
           </xpdl2:Implementation>
+          <xpdl2:TransitionRestrictions>
+            <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
+            </xpdl2:TransitionRestriction>
+          </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="121.0">
-              <xpdl2:Coordinates XCoordinate="360.0" YCoordinate="95.0"/>
+              <xpdl2:Coordinates XCoordinate="361.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -1192,7 +1707,7 @@ CustomerData.id = customerId;</xpdExt:Information>
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="61.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="93.0">
-              <xpdl2:Coordinates XCoordinate="498.0" YCoordinate="95.0"/>
+              <xpdl2:Coordinates XCoordinate="499.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -1208,7 +1723,7 @@ status = true;&#xD;
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="612.0" YCoordinate="95.0"/>
+              <xpdl2:Coordinates XCoordinate="613.0" YCoordinate="143.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -1255,7 +1770,7 @@ status = true;&#xD;
           </xpdl2:Performers>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="220.0" YCoordinate="95.0"/>
+              <xpdl2:Coordinates XCoordinate="217.0" YCoordinate="58.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -1267,6 +1782,16 @@ status = true;&#xD;
           <xpdExt:ActivityResourcePatterns>
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_9ohHAFdwEeimp4T1K2-dFg" Name="StartEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Start Event">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="47.0" LaneId="_dUGFAvoIEeeGs-PDHTbgtA" Width="58.0">
+              <xpdl2:Coordinates XCoordinate="100.0" YCoordinate="58.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
@@ -1318,9 +1843,19 @@ if(CustomerData.credit &lt; amount) {&#xD;
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
-        <xpdl2:Transition Id="_680c8f9kEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_dUGsEPoIEeeGs-PDHTbgtA" To="_680c8P9kEeehz8elB3v-pA">
+        <xpdl2:Transition Id="_680c8f9kEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_dUGsEPoIEeeGs-PDHTbgtA" To="_5_TsQPoIEeeGs-PDHTbgtA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_96p_4FdwEeimp4T1K2-dFg" xpdExt:DisplayName="" Name="" From="_9ohHAFdwEeimp4T1K2-dFg" To="_680c8P9kEeehz8elB3v-pA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
       </xpdl2:Transitions>
@@ -1335,7 +1870,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_Wc7nnPrGEee95b4_qDuZwA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="UpdateCustomerData" Name="UpdateCustomerData">
+    <xpdl2:WorkflowProcess Id="_Wc7nnPrGEee95b4_qDuZwA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="UpdateCustomerData" xpdExt:ApiEndPointParticipant="_iJoTgFdxEeimp4T1K2-dFg" Name="UpdateCustomerData">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_Wc7novrGEee95b4_qDuZwA" Name="CustomerData" Mode="INOUT" Required="true" xpdExt:DisplayName="CustomerData">
@@ -1365,9 +1900,29 @@ if(CustomerData.credit &lt; amount) {&#xD;
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_Wc7nn_rGEee95b4_qDuZwA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_Wc7nn_rGEee95b4_qDuZwA" Name="ReplyToUpdateCustomerDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: Update CustomerData Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_fMvroFdxEeimp4T1K2-dFg" CatchThrow="THROW">
+                <xpdl2:Message Id="_jYvK8FdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CustomerData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CustomerData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_iJoTgFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateCustomerData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateCustomerData" OperationName="UpdateCustomerData">
+                  <xpdExt:ExternalReference location="UpdateCustomerData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -1379,11 +1934,16 @@ if(CustomerData.credit &lt; amount) {&#xD;
               <xpdl2:Coordinates XCoordinate="626.0" YCoordinate="79.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_bKXNy_rLEee95b4_qDuZwA" Name="" xpdExt:DisplayName="">
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_bKXNzfrLEee95b4_qDuZwA"/>
@@ -1394,7 +1954,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="45.0" LaneId="_Wc7nm_rGEee95b4_qDuZwA" Width="43.0">
-              <xpdl2:Coordinates XCoordinate="294.0" YCoordinate="79.0"/>
+              <xpdl2:Coordinates XCoordinate="298.0" YCoordinate="161.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -1404,7 +1964,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="68.0" LaneId="_Wc7nm_rGEee95b4_qDuZwA" Width="108.0">
-              <xpdl2:Coordinates XCoordinate="462.0" YCoordinate="189.0"/>
+              <xpdl2:Coordinates XCoordinate="462.0" YCoordinate="161.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -1452,6 +2012,43 @@ if(CustomerData.credit &lt; amount) {&#xD;
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
+        <xpdl2:Activity Id="_fMvroFdxEeimp4T1K2-dFg" Name="UpdateCustomerDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Update CustomerData Service">
+          <xpdl2:Event>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_gCDjAFdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="CustomerData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CustomerData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_iJoTgFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateCustomerData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateCustomerData" OperationName="UpdateCustomerData">
+                  <xpdExt:ExternalReference location="UpdateCustomerData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
+          </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_iJoTgFdxEeimp4T1K2-dFg</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="27.0" LaneId="_Wc7nm_rGEee95b4_qDuZwA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="87.0" YCoordinate="161.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
         <xpdl2:Transition Id="_Wc7noPrGEee95b4_qDuZwA" xpdExt:DisplayName="" Name="" From="_4PuJEP9aEeehz8elB3v-pA" To="_bKXNy_rLEee95b4_qDuZwA">
@@ -1479,9 +2076,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           <xpdl2:Condition Type="OTHERWISE"/>
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
-            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition">
-              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
-            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_ymMmEfrLEee95b4_qDuZwA" xpdExt:DisplayName="" Name="" From="_bKXNzPrLEee95b4_qDuZwA" To="_Wc7nn_rGEee95b4_qDuZwA">
@@ -1498,6 +2093,16 @@ if(CustomerData.credit &lt; amount) {&#xD;
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
+        <xpdl2:Transition Id="_fiiVcFdxEeimp4T1K2-dFg" xpdExt:DisplayName="" Name="" From="_fMvroFdxEeimp4T1K2-dFg" To="_bKXNy_rLEee95b4_qDuZwA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
       </xpdl2:Transitions>
       <xpdl2:ExtendedAttributes>
         <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
@@ -1508,7 +2113,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true"/>
     </xpdl2:WorkflowProcess>
-    <xpdl2:WorkflowProcess Id="_s5tu8vrMEee95b4_qDuZwA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="UpdateCarData" Name="UpdateCarData">
+    <xpdl2:WorkflowProcess Id="_s5tu8vrMEee95b4_qDuZwA" xpdExt:XpdModelType="ServiceProcess" xpdExt:DisplayName="UpdateCarData" xpdExt:ApiEndPointParticipant="_a4NUUFdxEeimp4T1K2-dFg" Name="UpdateCarData">
       <xpdl2:ProcessHeader/>
       <xpdl2:FormalParameters>
         <xpdl2:FormalParameter Id="_s5tu_frMEee95b4_qDuZwA" Name="CarData" Mode="INOUT" Required="true" xpdExt:DisplayName="CarData">
@@ -1538,9 +2143,29 @@ if(CustomerData.credit &lt; amount) {&#xD;
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_s5tu9frMEee95b4_qDuZwA" Name="EndEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="End Event">
+        <xpdl2:Activity Id="_s5tu9frMEee95b4_qDuZwA" Name="ReplyToUpdateCarDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: UpdateCarData Service">
           <xpdl2:Event>
-            <xpdl2:EndEvent Result="None"/>
+            <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
+              <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_Y9Z0gFdxEeimp4T1K2-dFg" CatchThrow="THROW">
+                <xpdl2:Message Id="_dEwrcFdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="false" Direction="IN" Formal="CarData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CarData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_a4NUUFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateCarData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateCarData" OperationName="UpdateCarData">
+                  <xpdExt:ExternalReference location="UpdateCarData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:EndEvent>
           </xpdl2:Event>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
@@ -1552,11 +2177,16 @@ if(CustomerData.credit &lt; amount) {&#xD;
               <xpdl2:Coordinates XCoordinate="639.0" YCoordinate="79.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
         <xpdl2:Activity Id="_s5tu9vrMEee95b4_qDuZwA" Name="" xpdExt:DisplayName="">
           <xpdl2:Route GatewayType="Exclusive" MarkerVisible="true" ExclusiveType="Data"/>
           <xpdl2:TransitionRestrictions>
             <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
               <xpdl2:Split Type="Exclusive" ExclusiveType="Data">
                 <xpdl2:TransitionRefs>
                   <xpdl2:TransitionRef Id="_s5tu-vrMEee95b4_qDuZwA"/>
@@ -1567,7 +2197,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="45.0" LaneId="_s5tu8frMEee95b4_qDuZwA" Width="43.0">
-              <xpdl2:Coordinates XCoordinate="307.0" YCoordinate="79.0"/>
+              <xpdl2:Coordinates XCoordinate="309.0" YCoordinate="154.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -1577,7 +2207,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           </xpdl2:Implementation>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="68.0" LaneId="_s5tu8frMEee95b4_qDuZwA" Width="108.0">
-              <xpdl2:Coordinates XCoordinate="475.0" YCoordinate="189.0"/>
+              <xpdl2:Coordinates XCoordinate="475.0" YCoordinate="154.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
         </xpdl2:Activity>
@@ -1625,6 +2255,43 @@ if(CustomerData.credit &lt; amount) {&#xD;
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
+        <xpdl2:Activity Id="_Y9Z0gFdxEeimp4T1K2-dFg" Name="UpdateCarDataService" xpdExt:Visibility="Private" xpdExt:DisplayName="UpdateCarData Service">
+          <xpdl2:Event>
+            <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
+              <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
+                <xpdl2:Message Id="_ZwYwoFdxEeimp4T1K2-dFg">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="false" Direction="OUT" Formal="CarData">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">CarData</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_a4NUUFdxEeimp4T1K2-dFg" OperationName="">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                    <xpdl2:EndPoint EndPointType="WSDL">
+                      <xpdl2:ExternalReference location="UpdateCarData.wsdl"/>
+                    </xpdl2:EndPoint>
+                  </xpdl2:Service>
+                </xpdl2:WebServiceOperation>
+                <xpdExt:PortTypeOperation PortTypeName="UpdateCarData" OperationName="UpdateCarData">
+                  <xpdExt:ExternalReference location="UpdateCarData.wsdl"/>
+                </xpdExt:PortTypeOperation>
+              </xpdl2:TriggerResultMessage>
+            </xpdl2:StartEvent>
+          </xpdl2:Event>
+          <xpdl2:Performers>
+            <xpdl2:Performer>_a4NUUFdxEeimp4T1K2-dFg</xpdl2:Performer>
+          </xpdl2:Performers>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="27.0" LaneId="_s5tu8frMEee95b4_qDuZwA" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="87.0" YCoordinate="154.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+          <xpdl2:Extensions/>
+          <xpdExt:ActivityResourcePatterns>
+            <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
+          </xpdExt:ActivityResourcePatterns>
+        </xpdl2:Activity>
       </xpdl2:Activities>
       <xpdl2:Transitions>
         <xpdl2:Transition Id="_s5tu-PrMEee95b4_qDuZwA" xpdExt:DisplayName="" Name="" From="_YpVKIP9aEeehz8elB3v-pA" To="_s5tu9vrMEee95b4_qDuZwA">
@@ -1652,9 +2319,7 @@ if(CustomerData.credit &lt; amount) {&#xD;
           <xpdl2:Condition Type="OTHERWISE"/>
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
-            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition">
-              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
-            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_s5tu_PrMEee95b4_qDuZwA" xpdExt:DisplayName="" Name="" From="_s5tu9_rMEee95b4_qDuZwA" To="_s5tu9frMEee95b4_qDuZwA">
@@ -1669,6 +2334,16 @@ if(CustomerData.credit &lt; amount) {&#xD;
         <xpdl2:Transition Id="_YpVxMP9aEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_s5tu9PrMEee95b4_qDuZwA" To="_YpVKIP9aEeehz8elB3v-pA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_ZQS7UFdxEeimp4T1K2-dFg" xpdExt:DisplayName="" Name="" From="_Y9Z0gFdxEeimp4T1K2-dFg" To="_s5tu9vrMEee95b4_qDuZwA">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.LabelAnchorPosition">
+              <xpdl2:Coordinates XCoordinate="50.0" YCoordinate="0.0"/>
+              <xpdl2:Coordinates XCoordinate="0.0" YCoordinate="0.0"/>
+            </xpdl2:ConnectorGraphicsInfo>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
       </xpdl2:Transitions>
@@ -1711,11 +2386,6 @@ if(CustomerData.credit &lt; amount) {&#xD;
         </xpdl2:FormalParameter>
       </xpdl2:FormalParameters>
       <xpdl2:DataFields>
-        <xpdl2:DataField Id="_iwY_Rv0hEee-cfu0sOdBwA" xpdExt:DisplayName="CustomerData" Name="CustomerData" IsArray="false" ReadOnly="false">
-          <xpdl2:DataType>
-            <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_v-7JAP0UEee-cfu0sOdBwA"/>
-          </xpdl2:DataType>
-        </xpdl2:DataField>
         <xpdl2:DataField Id="_pE1_4P0hEee-cfu0sOdBwA" xpdExt:DisplayName="CarData" Name="CarData" IsArray="false" ReadOnly="false">
           <xpdl2:DataType>
             <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_-JTHkP0VEee-cfu0sOdBwA"/>
@@ -1750,11 +2420,23 @@ for(var i=0; i&lt;days; i++) {&#xD;
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_50MZ0Pr3Eee95b4_qDuZwA" Name="CatchMessageEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Catch Message Event">
+        <xpdl2:Activity Id="_50MZ0Pr3Eee95b4_qDuZwA" Name="CalculateCostService" xpdExt:Visibility="Private" xpdExt:DisplayName="CalculateCost Service">
           <xpdl2:Event>
             <xpdl2:StartEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Trigger="Message">
               <xpdl2:TriggerResultMessage xpdExt:Generated="false" CatchThrow="CATCH">
-                <xpdl2:Message Id="_7TMlIP8uEeehz8elB3v-pA"/>
+                <xpdl2:Message Id="_7TMlIP8uEeehz8elB3v-pA">
+                  <xpdl2:DataMappings>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="carId">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">carId</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="dateFrom">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">dateFrom</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                    <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="dateTo">
+                      <xpdl2:Actual ScriptGrammar="JavaScript">dateTo</xpdl2:Actual>
+                    </xpdl2:DataMapping>
+                  </xpdl2:DataMappings>
+                </xpdl2:Message>
                 <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_8XsIAP8uEeehz8elB3v-pA" OperationName="">
                   <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
                     <xpdl2:EndPoint EndPointType="WSDL">
@@ -1781,7 +2463,7 @@ for(var i=0; i&lt;days; i++) {&#xD;
             <xpdExt:AllocationStrategy xpdExt:Strategy="SYSTEM_DETERMINED"/>
           </xpdExt:ActivityResourcePatterns>
         </xpdl2:Activity>
-        <xpdl2:Activity Id="_50MZ0vr3Eee95b4_qDuZwA" Name="ReplyToCatchMessageEvent" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: Catch Message Event">
+        <xpdl2:Activity Id="_50MZ0vr3Eee95b4_qDuZwA" Name="ReplyToCalculateCostService" xpdExt:Visibility="Private" xpdExt:DisplayName="Reply To: CalculateCost Service">
           <xpdl2:Event>
             <xpdl2:EndEvent xpdExt:ImplementationType="WebService" Implementation="WebService" Result="Message">
               <xpdl2:TriggerResultMessage xpdExt:ReplyToActivityId="_50MZ0Pr3Eee95b4_qDuZwA" CatchThrow="THROW">
@@ -1833,6 +2515,11 @@ for(var i=0; i&lt;days; i++) {&#xD;
               </xpdl2:DataMappings>
             </xpdl2:SubFlow>
           </xpdl2:Implementation>
+          <xpdl2:TransitionRestrictions>
+            <xpdl2:TransitionRestriction>
+              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
+            </xpdl2:TransitionRestriction>
+          </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="168,186,200" Height="64.0" LaneId="_50Kkovr3Eee95b4_qDuZwA" Width="96.0">
               <xpdl2:Coordinates XCoordinate="328.0" YCoordinate="107.0"/>
@@ -1887,7 +2574,7 @@ CarData.id = carId;</xpdExt:Information>
           <xpdl2:Implementation>
             <xpdl2:Task>
               <xpdl2:TaskService xpdExt:ImplementationType="WebService" Implementation="WebService">
-                <xpdl2:MessageIn Id="_TsZaEv8uEeehz8elB3v-pA">
+                <xpdl2:MessageIn Id="_sF_csld2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:SourcePrimitiveProperty="true" Direction="IN" Formal="carId">
                       <xpdl2:Actual ScriptGrammar="JavaScript">carId</xpdl2:Actual>
@@ -1900,15 +2587,15 @@ CarData.id = carId;</xpdExt:Information>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageIn>
-                <xpdl2:MessageOut Id="_TsZaE_8uEeehz8elB3v-pA">
+                <xpdl2:MessageOut Id="_sF_cs1d2Eeimp4T1K2-dFg">
                   <xpdl2:DataMappings>
                     <xpdl2:DataMapping xpdExt:TargetPrimitiveProperty="true" Direction="OUT" Formal="cost">
                       <xpdl2:Actual ScriptGrammar="JavaScript">cost</xpdl2:Actual>
                     </xpdl2:DataMapping>
                   </xpdl2:DataMappings>
                 </xpdl2:MessageOut>
-                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://www.tibco.com/service_virtualisation" xpdExt:Alias="_17ADUP8sEeehz8elB3v-pA" OperationName="">
-                  <xpdl2:Service xpdExt:IsRemote="true" PortName="" ServiceName="">
+                <xpdl2:WebServiceOperation xpdExt:SecurityProfile="" xpdExt:Transport="http://schemas.xmlsoap.org/soap/http" xpdExt:Alias="_t9MukFd5Eeimp4T1K2-dFg" OperationName="CalculateCost">
+                  <xpdl2:Service xpdExt:IsRemote="true" PortName="CalculateCost_EP" ServiceName="CalculateCost_Provider">
                     <xpdl2:EndPoint EndPointType="WSDL">
                       <xpdl2:ExternalReference location="CalculateCost.wsdl"/>
                     </xpdl2:EndPoint>
@@ -1921,16 +2608,11 @@ CarData.id = carId;</xpdExt:Information>
             </xpdl2:Task>
           </xpdl2:Implementation>
           <xpdl2:Performers>
-            <xpdl2:Performer>_17ADUP8sEeehz8elB3v-pA</xpdl2:Performer>
+            <xpdl2:Performer>_t9MukFd5Eeimp4T1K2-dFg</xpdl2:Performer>
           </xpdl2:Performers>
-          <xpdl2:TransitionRestrictions>
-            <xpdl2:TransitionRestriction>
-              <xpdl2:Join Type="Exclusive" ExclusiveType="Data"/>
-            </xpdl2:TransitionRestriction>
-          </xpdl2:TransitionRestrictions>
           <xpdl2:NodeGraphicsInfos>
             <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,0,0" Height="64.0" LaneId="_50Kkovr3Eee95b4_qDuZwA" Width="96.0">
-              <xpdl2:Coordinates XCoordinate="200.0" YCoordinate="107.0"/>
+              <xpdl2:Coordinates XCoordinate="201.0" YCoordinate="44.0"/>
             </xpdl2:NodeGraphicsInfo>
           </xpdl2:NodeGraphicsInfos>
           <xpdl2:Extensions/>
@@ -1997,9 +2679,10 @@ CarData.id = carId;</xpdExt:Information>
             </xpdl2:ConnectorGraphicsInfo>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
-        <xpdl2:Transition Id="_Sn13sf8sEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_50MZ0Pr3Eee95b4_qDuZwA" To="_Sn13sP8sEeehz8elB3v-pA">
+        <xpdl2:Transition Id="_Sn13sf8sEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_50MZ0Pr3Eee95b4_qDuZwA" To="_4fNKkPr8Eee95b4_qDuZwA">
           <xpdl2:ConnectorGraphicsInfos>
             <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.EndAnchorPosition"/>
           </xpdl2:ConnectorGraphicsInfos>
         </xpdl2:Transition>
         <xpdl2:Transition Id="_KwxGYP8vEeehz8elB3v-pA" xpdExt:DisplayName="" Name="" From="_Kb0xIP8vEeehz8elB3v-pA" To="_Sn13sP8sEeehz8elB3v-pA">
@@ -2021,6 +2704,74 @@ CarData.id = carId;</xpdExt:Information>
       </xpdl2:ExtendedAttributes>
       <xpdl2:Extensions/>
       <xpdExt:ServiceProcessConfiguration xpdExt:DeployToProcessRuntime="true"/>
+    </xpdl2:WorkflowProcess>
+    <xpdl2:WorkflowProcess Id="_aLfCABv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="UpgradeCar - not Used" Name="UpgradeCarnotUsed">
+      <xpdl2:ProcessHeader/>
+      <xpdl2:FormalParameters>
+        <xpdl2:FormalParameter Id="_hBFA0Rv5EeiHGt6Y3z-E2Q" Name="Booking" Mode="INOUT" Required="true" xpdExt:DisplayName="Booking">
+          <xpdl2:DataType>
+            <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_4N7YgP0ZEee-cfu0sOdBwA"/>
+          </xpdl2:DataType>
+        </xpdl2:FormalParameter>
+        <xpdl2:FormalParameter Id="_ikWKYBv5EeiHGt6Y3z-E2Q" Name="CarData" Mode="INOUT" Required="true" xpdExt:DisplayName="CarData">
+          <xpdl2:DataType>
+            <xpdl2:ExternalReference location="CarHire.bom" namespace="http://www.eclipse.org/uml2/3.0.0/UML" xref="_-JTHkP0VEee-cfu0sOdBwA"/>
+          </xpdl2:DataType>
+        </xpdl2:FormalParameter>
+      </xpdl2:FormalParameters>
+      <xpdl2:Activities>
+        <xpdl2:Activity Id="_aNRKsBv5EeiHGt6Y3z-E2Q" Name="Start" xpdExt:Visibility="Private" xpdExt:DisplayName="Start">
+          <xpdl2:Event>
+            <xpdl2:StartEvent Trigger="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="27.0" LaneId="_aLozARv5EeiHGt6Y3z-E2Q" Width="27.0">
+              <xpdl2:Coordinates XCoordinate="53.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_aNRKsRv5EeiHGt6Y3z-E2Q" Name="End" xpdExt:Visibility="Private" xpdExt:DisplayName="End">
+          <xpdl2:Event>
+            <xpdl2:EndEvent Result="None"/>
+          </xpdl2:Event>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="30.0" LaneId="_aLozARv5EeiHGt6Y3z-E2Q" Width="30.0">
+              <xpdl2:Coordinates XCoordinate="515.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+        <xpdl2:Activity Id="_aNRKshv5EeiHGt6Y3z-E2Q" Name="Task" xpdExt:Visibility="Private" xpdExt:DisplayName="Task">
+          <xpdl2:Implementation>
+            <xpdl2:No/>
+          </xpdl2:Implementation>
+          <xpdl2:NodeGraphicsInfos>
+            <xpdl2:NodeGraphicsInfo BorderColor="0,0,128" FillColor="255,219,74" Height="64.0" LaneId="_aLozARv5EeiHGt6Y3z-E2Q" Width="96.0">
+              <xpdl2:Coordinates XCoordinate="264.0" YCoordinate="132.0"/>
+            </xpdl2:NodeGraphicsInfo>
+          </xpdl2:NodeGraphicsInfos>
+        </xpdl2:Activity>
+      </xpdl2:Activities>
+      <xpdl2:Transitions>
+        <xpdl2:Transition Id="_aNRKsxv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="" Name="" From="_aNRKshv5EeiHGt6Y3z-E2Q" To="_aNRKsRv5EeiHGt6Y3z-E2Q">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+            <xpdl2:ConnectorGraphicsInfo ToolId="XPD.StartAnchorPosition"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+        <xpdl2:Transition Id="_aNRKtBv5EeiHGt6Y3z-E2Q" xpdExt:DisplayName="" Name="" From="_aNRKsBv5EeiHGt6Y3z-E2Q" To="_aNRKshv5EeiHGt6Y3z-E2Q">
+          <xpdl2:ConnectorGraphicsInfos>
+            <xpdl2:ConnectorGraphicsInfo BorderColor="0,0,128" ToolId="XPD.ConnectionInfo"/>
+          </xpdl2:ConnectorGraphicsInfos>
+        </xpdl2:Transition>
+      </xpdl2:Transitions>
+      <xpdl2:ExtendedAttributes>
+        <xpdl2:ExtendedAttribute Name="Destination" Value="BPM"/>
+        <xpdl2:ExtendedAttribute Name="WorkflowProcessSimulationData"><simulation:WorkflowProcessSimulationData>
+            <simulation:ParameterDistribution ParameterId="Booking"/>
+            <simulation:ParameterDistribution ParameterId="CarData"/>
+          </simulation:WorkflowProcessSimulationData></xpdl2:ExtendedAttribute>
+      </xpdl2:ExtendedAttributes>
+      <xpdl2:Extensions/>
     </xpdl2:WorkflowProcess>
   </xpdl2:WorkflowProcesses>
   <xpdl2:ExtendedAttributes>
